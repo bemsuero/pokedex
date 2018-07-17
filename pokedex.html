@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- my css -->
     <link rel="stylesheet" type="text/css" href="main.css">
+<!-- animation -->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+<!-- font -->
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
     <meta charset="utf-8">
     <title>Pokedex</title>
   </head>
   <body>
+    <div id="background">
+    <img class="hidden" id="pokedex">
 
+      </div>
+      <section class="pokedexContainer">
+
+      <img onclick="start()" class="revealed" id="startScreen">
+      <img  class="revealed animated infinite flash " id="pressStart">
+    </seciton>
+    </div>
+
+    </div>
   </body>
   <script src="main.js">
 
   </script>
 </html>
+
+
+<!-- You need a Trainer name
+
+HP, ATK, DEF, ABILITIES
+
+Pokemon belong to Trainer obj
+
+Trainer.get(pokemon)
+
+Display relevant info on at least 3 pokemon
+use any grid system  -->
