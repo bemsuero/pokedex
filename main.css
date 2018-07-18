@@ -38,80 +38,72 @@ z-index: -1;
   text-shadow: 2px 2px 5px gray;
 }
 #pokeImage {
-  /* position: relative;
-  top: 120px;
-  left: 150px; */
   z-index: 2;
+  width: 300px;
+  height: 300px;
 }
 
 #pokemonSelect  {
-  /* position: relative;
-  top: -10px;
-  left: 545px; */
   font-size: 60%;
   z-index: 2;
   color: white;
   text-shadow: 2px 2px black;
+  margin-left: 10%;
+  margin-top: 1%;
 }
 
 #pokemonSelectBox  {
-  /* position: relative;
-  top: 0px;
-  left: 510px;
   overflow: auto;
   height: 160px;
-  overflow: auto hidden; */
+  overflow: auto hidden;
   font-size: 60%;
   z-index: 2;
   width: 175px;
+  margin-left: 1%;
+  position: absolute;
+  top: 35%;
+  left: 42%;
 }
 
 #pokeName {
-  /* position: relative;
-  top: -250px;
-  left: 625px; */
   z-index: 2;
   color: black;
   text-shadow: 2px 2px 5px gray;
 }
 
 #pokeNumber {
-  /* position: relative;
-  top: -315px;
-  left: 625px; */
   z-index: 2;
   color: white;
   text-shadow: 2px 2px black;
 }
 
-#type {
-  /* position: relative;
-  top: -190px;
-  left: 750px; */
+#pokeType {
   z-index: 2;
+  position: absolute;
+  top: 33%;
+  left: 60%;
 }
 
 #atk {
-  /* position: relative;
-  top: -120px;
-  left: 850px; */
   z-index: 2;
+  margin-left: 2%;
+  margin-top: 0.25%;
+  font-size: 125%;
 }
 
 #def {
-  /* position: relative;
-  top: -70px;
-  left: 850px; */
   z-index: 2;
+    margin-left: 2%;
+    font-size: 125%;
+    margin-top: 2.25%;
 }
 
 #abilityBox {
-  /* position: relative;
-  top: 30px;
-  overflow: auto hidden;
-  width: 80%;
-  left: 120px; */
+  /* overflow: auto hidden; */
   z-index: 2;
+  margin-left: 8%;
+  padding-left: 2%;
+  padding-right: 10%;
 }
 
 .revealed {
@@ -140,11 +132,32 @@ z-index: -1;
 
 }
 
-div {
-    border: black 3px solid;
+div.col.s12 {
+height: 100px;
+}
+div.col.s6 {
+height: 50px;
 }
 
+div.col.s2 {
+height: 90px;
+}
 
-section {
+div.col.s4 {
+height: 90px;
+}
+
+div.col.s8 {
+height: 15px;
+}
+
+/* div {
+  border: black 3px solid;
+} */
+/* section {
 border: black 3px solid;
+} */
+
+#sectionHelper {
+
 }
