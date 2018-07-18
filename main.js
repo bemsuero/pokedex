@@ -54,14 +54,21 @@ function start() {
 
 //
 
-// function loadDoc() {
-//   var xhttp = new XMLHttpRequest();
-//   xhttp.onreadystatechange = function() {
-//     if (this.readyState == 4 && this.status == 200) {
-//       document.getElementById("info").innerHTML =
-//       this.responseText;
-//     }
-//   };
-//   xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/test.txt", true);
-//   xhttp.send();
-// }
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      document.getElementById("pokeName").inneratkML = myObj.name;
+document.getElementById("pokeImage").src = myObj.sprites.front_default;
+document.getElementById("pokeNumber").inneratkML = "Num " + myObj.id;
+document.getElementById("pokeName").inneratkML = myObj.name;
+document.getElementById("pokeType").inneratkML = myObj.types[0].type.name;
+document.getElementById("atk").inneratkML = myObj.stats[4].stat.base_stat;
+document.getElementById("def").inneratkML = myObj.stats[3].stat.base_stat;
+  document.getElementById("abilityBox").inneratkML = "HP is: " + myObj.stats[5].stat.base + " " + myObj.abilities[0].ability.name + " " + myObj.abilities[1].ability.name;
+    }
+  };
+  xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/squirtle.txt", true);
+  xhttp.send();
+}

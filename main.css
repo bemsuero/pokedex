@@ -90,21 +90,21 @@ left: 1px;
   z-index: 2;
 }
 
-#ht {
+#atk {
   position: relative;
   top: -120px;
   left: 850px;
   z-index: 2;
 }
 
-#wt {
+#def {
   position: relative;
   top: -70px;
   left: 850px;
   z-index: 2;
 }
 
-#descriptionBox {
+#abilityBox {
   position: relative;
   top: 30px;
   left: 120px;

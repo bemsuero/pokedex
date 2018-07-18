@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <!-- MAT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
     <!-- my css -->
     <link rel="stylesheet" type="text/css" href="main.css">
+
 <!-- animation -->
     <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-<!-- font -->
-<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
     <meta charset="utf-8">
     <title>Pokedex</title>
@@ -18,7 +24,7 @@
         <img id="pokeImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTioW2IhMe_KtYj-61PdgqO9Qdvt1BMiw4yteITIgc-vBFilqqE"> -->
         <div id="pokemonSelect">Select Pokemon</div>
         <div id="pokemonSelectBox"> <ul>
-          <li>001 Bulbasor</li>
+          <li onclick="loadDoc()">001 Bulbasor</li>
           <li>002 uhhhhhhhh</li>
           <li>003 Venasaur? Probably</li>
           <li>004 Charmander</li>
@@ -41,12 +47,12 @@
           <li>005 Flame Rat 2</li>
           <li>006 Charazard</li>
         </ul> </div>
-        <div id="pokeName">Squirttle</div>
-        <div id="pokeNumber">007</div>
-        <div id="type">TypeFill</div>
-        <div id="ht">56 inches </div>
-        <div id="wt">56 kg</div>
-        <div id="descriptionBox">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div id="pokeName"></div>
+        <div id="pokeNumber"></div>
+        <div id="pokeType"></div>
+        <div id="atk"></div>
+        <div id="def"></div>
+        <div id="abilityBox"> </div>
         <img id="pokedex">
       </section>
 
@@ -62,22 +68,16 @@
 
   </body>
   <script src="main.js">
-
   </script>
 </html>
 <!-- <div id="info">
-
 </div>
 <button  onclick="loadDoc()">CLICK ME</button> -->
 
 
 <!-- You need a Trainer name
-
 HP, ATK, DEF, ABILITIES
-
 Pokemon belong to Trainer obj
-
 Trainer.get(pokemon)
-
 Display relevant info on at least 3 pokemon
 use any grid system  -->
