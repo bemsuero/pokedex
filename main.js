@@ -104,7 +104,7 @@ document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
   document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat +  ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
     }
   };
-  xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/squirtle.txt", true);
+  xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/7/", true);
   xhttp.send();
 }
 
@@ -122,7 +122,7 @@ document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
   document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat +  ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
     }
   };
-  xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/psyduck.txt", true);
+  xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/54/", true);
   xhttp.send();
 }
 
@@ -140,7 +140,7 @@ document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
   document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat +  ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
     }
   };
-  xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/growlithe.txt", true);
+  xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/58/", true);
   xhttp.send();
 }
 
@@ -158,6 +158,6 @@ document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
   document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat +  ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
     }
   };
-  xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/rapidash.txt", true);
+  xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/78/", true);
   xhttp.send();
 }
