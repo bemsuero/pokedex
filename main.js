@@ -54,18 +54,18 @@ function start() {
 
 //
 
-function loadDoc() {
+function squirtle() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       var myObj = JSON.parse(this.responseText);
-      document.getElementById("poke")(myObj.name);
-document.getElementById("pokeName")(myObj.sprites.front_default);
-document.getElementById("pokeNumber")("Num " + myObj.id);
-document.getElementById("pokeType")(myObj.types[0].type.name);
-document.getElementById("atk")(myObj.stats[4].base_stat);
-document.getElementById("def")(myObj.stats[3].base_stat);
-  document.getElementById("abilityBox")("HP is: " + myObj.stats[5].base_stat +  ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ");
+      document.getElementById("pokeName").innerHTML = myObj.name;
+document.getElementById("pokeImage").src = myObj.sprites.front_default;
+document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
+document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
+document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
+document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
+  document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat +  ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
     }
   };
   xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/squirtle.txt", true);
