@@ -1,6 +1,16 @@
+
 <!DOCTYPE html>
 <html>
   <head>
+
+    <!-- Audio (Works because audio was put here instead of resource folder. If you needed to do that use absolute path) Works on firefox-->
+      <audio controls autoplay hidden loop>
+       <source src="start-music.mp4"
+               type='audio/mp4'>
+       <!-- The next line will only be executed if the browser doesn't support the <audio> tag-->
+
+       <p>Your user agent does not support the HTML5 Audio element.</p>
+      </audio>
 
     <!-- MAT -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
@@ -19,52 +29,59 @@
     <title>Pokedex</title>
   </head>
   <body>
-<div id="background">
+    <!-- <section class="revealed"
+      id="firstScreen">
+<div class="col s12"></div>
+<div class="col s12"></div>
+      <section class="row" id="pokedexContainer">
+        <div class="col s3">
+
+        </div> -->
+<!-- <div class="col s6"> -->
+<!-- <section class="revealed" id="firstScreen"> -->
+
+        <img class="revealed" onclick="start()" id="startScreen">
+
+        <img class="revealed animated infinite flash" id="pressStart">
+      <!-- </section> -->
+
+      <!-- </div>
+      <div class="col s3">
+
+      </div>
+
+      </section>
+</section> -->
+
+<!-- <div class="container"> -->
        <section class="hidden" id="infoScreen">
-        <img id="pokeImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTioW2IhMe_KtYj-61PdgqO9Qdvt1BMiw4yteITIgc-vBFilqqE"> -->
-        <div id="pokemonSelect">Select Pokemon</div>
-        <div id="pokemonSelectBox"> <ul>
+    <section class="row">
+      <div class="col s12">
+        <img id="pokedex">
+      </div>
+      <div class="col s4">
+        <img id="pokeImage" src="images/pokeball.png">
+         </div>
+         <div class="col s7" id="pokeNumber">POKEMON NUMBER</div>
+          <div class="col s7" id="pokeName">SQUIRTLE</div>
+          <div class="col s3"id="pokemonSelect">Select Pokemon</div>
+          <div class="col s6"id="pokemonSelectBox"> <ul>
           <li onclick="squirtle()">007 Squirtle</li>
           <li>002 uhhhhhhhh</li>
           <li>003 Venasaur? Probably</li>
           <li>004 Charmander</li>
           <li>005 Flame Rat 2</li>
           <li>006 Charazard</li>
-          <li>003 Venasaur? Probably</li>
-          <li>004 Charmander</li>
-          <li>005 Flame Rat 2</li>
-          <li>006 Charazard</li>
-          <li>003 Venasaur? Probably</li>
-          <li>004 Charmander</li>
-          <li>005 Flame Rat 2</li>
-          <li>006 Charazard</li>
-          <li>003 Venasaur? Probably</li>
-          <li>004 Charmander</li>
-          <li>005 Flame Rat 2</li>
-          <li>006 Charazard</li>
-          <li>003 Venasaur? Probably</li>
-          <li>004 Charmander</li>
-          <li>005 Flame Rat 2</li>
-          <li>006 Charazard</li>
         </ul> </div>
-        <div id="pokeName"></div>
-        <div id="pokeNumber"></div>
-        <div id="pokeType"></div>
-        <div id="atk"></div>
-        <div id="def"></div>
-        <div id="abilityBox"> </div>
-        <img id="pokedex">
-      </section>
-
-
-      <section class="pokedexContainer">
-
-      <img onclick="start()" class="revealed" id="startScreen">
-      <img class="revealed animated infinite flash " id="pressStart">
-
-    </seciton>
-</div>
-
+        <div class="col s2" id="pokeType">POKE TYPE</div>
+        <div class="col s2" id="atk">POKE ATTACK</div>
+        <div class="col s2" id="def">POKE DEFENSE</div>
+        </section>
+        <section class="row">
+        <div id="abilityBox"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+          </section>
+          </div>
+      <!-- </section> -->
 
   </body>
   <script src="main.js">

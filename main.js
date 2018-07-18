@@ -40,6 +40,9 @@ function start() {
   z.classList.remove("animated");
   z.classList.remove("infinite");
   z.classList.remove("flash");
+  // var w = document.getElementById("firstScreen");
+  // w.classList.add("hidden");
+  // w.classList.remove("revealed")
 
   var y = document.getElementById("infoScreen")
   y.classList.add("revealed");
