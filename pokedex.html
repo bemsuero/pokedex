@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 
   <!-- font -->
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Permanent+Marker" rel="stylesheet">
 
   <!-- my css -->
   <link rel="stylesheet" type="text/css" href="main.css">
@@ -39,7 +39,7 @@
         </div> -->
   <!-- <div class="col s6"> -->
   <!-- <section class="revealed" id="firstScreen"> -->
-
+<h1 class="revealed" id="heading"></h1>
   <img class="revealed" onclick="start()" id="startScreen">
 
   <img class="revealed animated infinite flash" id="pressStart">
@@ -67,7 +67,7 @@
         </div>
         <div class="nav2">
           <div class="menu2">
-            <p>Red's Pokemon:</p>
+            <div>Trainer<div id="trainerName"></div> Pokemon List:</div>
             <div id="pokeList"></div>
           </div>
           <img src="images/transparent.png">

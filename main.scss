@@ -1,0 +1,255 @@
+$nor: no-repeat;
+$hid: hidden;
+$fix: fixed;
+$poke-border-r: rgb(255, 123, 123) 4px solid;
+$poke-border-b: rgb(0, 0, 0) 4px solid;
+$shadow-g: 2px 2px 5px gray;
+$shadow-b: 2px 2px black;
+$trans: visibility 0s, opacity 0.5s linear;
+
+html {
+  font-family: 'Press Start 2P', cursive;
+  background-image: url("images/startBackground.jpg");
+background-repeat: $nor;
+overflow: $hid;
+}
+
+h1  {
+  font-size: 300%;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+margin-top: 1%;
+}
+
+.nav {
+position: $fix;
+top: -100px;
+transition: 1s;
+
+}
+
+.nav:hover {
+  position: $fix;
+  top: 0px;
+  transition: 1s;
+}
+
+.menu {
+  font-size: 75%;
+  text-align: center;
+  padding: 1%;
+  background-color: white;
+  border-left: $poke-border-r;
+  border-right: $poke-border-r;
+  border-top: $poke-border-b;
+  border-bottom: $poke-border-b;
+}
+
+.nav2 {
+position: $fix;
+top: -100px;
+left: 230px;
+transition: 1s;
+}
+.nav2:hover {
+  position: $fix;
+  top: 0px;
+  transition: 1s;
+}
+
+.menu2 {
+  font-size: 75%;
+  text-align: center;
+  padding: 1%;
+  max-width: 175px;
+  max-height: 100px;
+  color: black;
+  background-color: white;
+  border-left: $poke-border-r;
+  border-right: $poke-border-r;
+  border-top: $poke-border-b;
+  border-bottom: $poke-border-b;
+  overflow: auto;
+}
+
+
+#startScreen {
+position: $fix;
+top: 10%;
+left: 35%;
+}
+
+#pressStart {
+position: $fix;
+top: 35%;
+left: 44%;
+
+}
+
+#pokedex {
+  height: 100%;
+  width: 100%;
+  background-image: url("images/pokedex.png");
+  background-position: center;
+  background-repeat: $nor;
+position: $fix;
+z-index: -1;
+}
+
+#infoScreen {
+  color: black;
+  text-shadow: $shadow-g;
+}
+#pokeImage {
+  z-index: 2;
+  width: 300px;
+  height: 300px;
+}
+
+#pokemonSelect  {
+  font-size: 60%;
+  z-index: 2;
+  color: white;
+  text-shadow: $shadow-b;
+  margin-left: 10%;
+  margin-top: 1%;
+}
+
+#pokemonSelectBox  {
+  overflow: auto;
+  height: 160px;
+  overflow: auto $hid;
+  font-size: 60%;
+  z-index: 2;
+  width: 175px;
+  margin-left: 1%;
+  position: absolute;
+  top: 35%;
+  left: 42%;
+}
+
+#pokeName {
+  z-index: 2;
+  color: black;
+  text-shadow: $shadow-g;
+}
+
+#pokeNumber {
+  z-index: 2;
+  color: white;
+  text-shadow: $shadow-b;
+}
+
+#pokeType {
+  z-index: 2;
+  position: absolute;
+  top: 33%;
+  left: 60%;
+  font-size: 80%;
+}
+
+#atk {
+  z-index: 2;
+  margin-left: 2%;
+  margin-top: 1%;
+  font-size: 125%;
+}
+
+#def {
+  z-index: 2;
+    margin-left: 2%;
+    font-size: 125%;
+    margin-top: 2.5%;
+}
+
+#abilityBox {
+  z-index: 2;
+  margin-left: 8%;
+  padding-left: 2%;
+  padding-right: 10%;
+}
+
+.revealed {
+  opacity: 1 !important;
+  transition-duration: 2s;
+  visibility: visible;
+    transition: $trans;
+}
+
+.hidden {
+  opacity: 0 !important;
+  visibility: $hid;
+  transition: $trans;
+}
+#trainerName {
+  margin-top: 0%;
+}
+
+div.col.s12 {
+height: 100px;
+}
+div.col.s6 {
+height: 50px;
+}
+
+div.col.s2 {
+height: 90px;
+}
+
+div.col.s4 {
+height: 90px;
+}
+
+div.col.s8 {
+height: 15px;
+}
+
+.default {
+  color: black;
+}
+
+.water {
+  color: blue;
+}
+
+.fire {
+  color: red;
+}
+
+.grass {
+  color: rgb(29,187,31);
+}
+
+.rock {
+  color: rgb(80,67,46);
+}
+
+// @media screen and (max-width 375px) {
+// html {
+//   opacity: 0.5;
+//   height: 300px; //width auto adjusts, so you don't have to.
+// }
+// }
+//
+// @media screen and (max-width 376px) and (max-width 768px) {
+// html {
+//   opacity: 0.5;
+//   height: 300px; //width auto adjusts, so you don't have to.
+// }
+// }
+//
+// @media screen and (max-width 789px) and (max-width 1024px) {
+// html {
+//   opacity: 0.5;
+//   height: 300px; //width auto adjusts, so you don't have to.
+// }
+// }
+//
+// @media screen and (max-width 1025px) and (max-width 1440px) {
+// html {
+//   opacity: 0.5;
+//   height: 300px; //width auto adjusts, so you don't have to.
+// }
+// }
+
+//each is adjusted through the inspector so we can see the website well in each size.

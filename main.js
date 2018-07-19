@@ -1,9 +1,9 @@
 console.log("Everything is in control")
-window.onload
 pokemonPage = {
   pokedex: "images/" + "pokedex.png",
   startScreen: "images/" + "startScreenUpdate.png",
-  pressStart: "images/" + "pressStart.png"
+  pressStart: "images/" + "pressStart.png",
+  pokemonHeading: "Pokemon Version 2.4"
 }
 
 var a = document.getElementById("pokedex");
@@ -11,6 +11,9 @@ a.src = pokemonPage.pokedex;
 
 var b = document.getElementById("startScreen");
 b.src = pokemonPage.startScreen;
+
+var c = document.getElementById("heading");
+c.innerHTML = pokemonPage.pokemonHeading;
 
 var startFlash = document.getElementById("pressStart");
 startFlash.src = pokemonPage.pressStart;
@@ -29,6 +32,8 @@ startFlash.src = pokemonPage.pressStart;
 //   } LOLOLOLOLOLLOLLOLOLOLOLOLOLOLOLOLOLOL
 // }
 
+
+
 function start() {
   var x = document.getElementById("startScreen");
   x.classList.add("hidden");
@@ -46,6 +51,10 @@ function start() {
   var y = document.getElementById("infoScreen")
   y.classList.add("revealed");
   y.classList.remove("hidden");
+var trainerName = prompt("What's your name Trainer?");
+var addName = document.getElementById("trainerName");
+addName.innerHTML = trainerName;
+loopThrough();
 }
 var color = document.getElementById('pokeType')
 
@@ -174,6 +183,8 @@ owner = {
       alert(JSON.stringify(pokemonGet[nope]));
     }
 }
+
+
 
 
     function squirtle() {
@@ -366,6 +377,20 @@ owner = {
         alert("You have " + totalPokemon + " pokemon")
         check();
 }
+
+// function loopThrough() {
+//   var createPokemonSelectBox = document.createElement("P");
+// num = 0;
+// for (num = 0; num <= 807; num++)
+// var populateBox = document.createTextNode();
+// var space1 = document.createTextNode(" ");
+// createPokemonSelectBox.appendChild(populateBox);
+//
+// document.getElementById("pokemonSelectBox").appendChild("populateBox");
+// document.getElementById("pokemonSelectBox").appendChild("space1");
+// }
+
+// "https://pokeapi.co/api/v2/pokemon/" + [num]
 
 function check() {
   var createList = document.createElement("P");

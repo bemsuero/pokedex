@@ -1,44 +1,45 @@
 html {
   font-family: 'Press Start 2P', cursive;
   background-image: url("images/startBackground.jpg");
-background-repeat: no-repeat;
-overflow: hidden;
-}
-.nav {
-position: fixed;
-top: -100px;
-transition: 1s;
+  background-repeat: no-repeat;
+  overflow: hidden; }
 
-}
+h1 {
+  font-size: 300%;
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  margin-top: 1%; }
+
+.nav {
+  position: fixed;
+  top: -100px;
+  transition: 1s; }
 
 .nav:hover {
   position: fixed;
   top: 0px;
-  transition: 1s;
-}
+  transition: 1s; }
 
 .menu {
   font-size: 75%;
   text-align: center;
   padding: 1%;
   background-color: white;
-  border-left: rgb(255, 123, 123) 4px solid;
-  border-right: rgb(255, 123, 123) 4px solid;
-  border-top: rgb(0, 0, 0) 4px solid;
-  border-bottom: rgb(0, 0, 0) 4px solid;
-}
+  border-left: #ff7b7b 4px solid;
+  border-right: #ff7b7b 4px solid;
+  border-top: black 4px solid;
+  border-bottom: black 4px solid; }
 
 .nav2 {
-position: fixed;
-top: -100px;
-left: 230px;
-transition: 1s;
-}
+  position: fixed;
+  top: -100px;
+  left: 230px;
+  transition: 1s; }
+
 .nav2:hover {
   position: fixed;
   top: 0px;
-  transition: 1s;
-}
+  transition: 1s; }
 
 .menu2 {
   font-size: 75%;
@@ -48,30 +49,21 @@ transition: 1s;
   max-height: 100px;
   color: black;
   background-color: white;
-  border-left: rgb(255, 123, 123) 4px solid;
-  border-right: rgb(255, 123, 123) 4px solid;
-  border-top: rgb(0, 0, 0) 4px solid;
-  border-bottom: rgb(0, 0, 0) 4px solid;
-  overflow: auto;
-}
-
-#pokedexContainer {
-
-}
-
+  border-left: #ff7b7b 4px solid;
+  border-right: #ff7b7b 4px solid;
+  border-top: black 4px solid;
+  border-bottom: black 4px solid;
+  overflow: auto; }
 
 #startScreen {
-position: fixed;
-top: 10%;
-left: 35%;
-}
+  position: fixed;
+  top: 10%;
+  left: 35%; }
 
 #pressStart {
-position: fixed;
-top: 35%;
-left: 44%;
-
-}
+  position: fixed;
+  top: 35%;
+  left: 44%; }
 
 #pokedex {
   height: 100%;
@@ -79,30 +71,27 @@ left: 44%;
   background-image: url("images/pokedex.png");
   background-position: center;
   background-repeat: no-repeat;
-position: fixed;
-z-index: -1;
-}
+  position: fixed;
+  z-index: -1; }
 
 #infoScreen {
   color: black;
-  text-shadow: 2px 2px 5px gray;
-}
+  text-shadow: 2px 2px 5px gray; }
+
 #pokeImage {
   z-index: 2;
   width: 300px;
-  height: 300px;
-}
+  height: 300px; }
 
-#pokemonSelect  {
+#pokemonSelect {
   font-size: 60%;
   z-index: 2;
   color: white;
   text-shadow: 2px 2px black;
   margin-left: 10%;
-  margin-top: 1%;
-}
+  margin-top: 1%; }
 
-#pokemonSelectBox  {
+#pokemonSelectBox {
   overflow: auto;
   height: 160px;
   overflow: auto hidden;
@@ -112,118 +101,85 @@ z-index: -1;
   margin-left: 1%;
   position: absolute;
   top: 35%;
-  left: 42%;
-}
+  left: 42%; }
 
 #pokeName {
   z-index: 2;
   color: black;
-  text-shadow: 2px 2px 5px gray;
-}
+  text-shadow: 2px 2px 5px gray; }
 
 #pokeNumber {
   z-index: 2;
   color: white;
-  text-shadow: 2px 2px black;
-}
+  text-shadow: 2px 2px black; }
 
 #pokeType {
   z-index: 2;
   position: absolute;
   top: 33%;
   left: 60%;
-  font-size: 80%;
-}
+  font-size: 80%; }
 
 #atk {
   z-index: 2;
   margin-left: 2%;
   margin-top: 1%;
-  font-size: 125%;
-}
+  font-size: 125%; }
 
 #def {
   z-index: 2;
-    margin-left: 2%;
-    font-size: 125%;
-    margin-top: 2.5%;
-}
+  margin-left: 2%;
+  font-size: 125%;
+  margin-top: 2.5%; }
 
 #abilityBox {
-  /* overflow: auto hidden; */
   z-index: 2;
   margin-left: 8%;
   padding-left: 2%;
-  padding-right: 10%;
-}
+  padding-right: 10%; }
 
 .revealed {
   opacity: 1 !important;
   transition-duration: 2s;
   visibility: visible;
-    transition: visibility 0s, opacity 0.5s linear;
-}
+  transition: visibility 0s, opacity 0.5s linear; }
 
 .hidden {
   opacity: 0 !important;
   visibility: hidden;
-  transition: visibility 0s, opacity 0.5s linear;
-}
-}
+  transition: visibility 0s, opacity 0.5s linear; }
 
-
-
-#firstScreen {
-
-
-}
-
-.row#pokedexContainer {
-  /* border: red 2px solid; */
-
-}
+#trainerName {
+  margin-top: 0%; }
 
 div.col.s12 {
-height: 100px;
-}
+  height: 100px; }
+
 div.col.s6 {
-height: 50px;
-}
+  height: 50px; }
 
 div.col.s2 {
-height: 90px;
-}
+  height: 90px; }
 
 div.col.s4 {
-height: 90px;
-}
+  height: 90px; }
 
 div.col.s8 {
-height: 15px;
-}
+  height: 15px; }
 
-/* div {
-  border: black 3px solid;
-} */
-/* section {
-border: black 3px solid;
-} */
 .default {
-  color: black;
-}
+  color: black; }
 
 .water {
-  color: blue;
-}
+  color: blue; }
 
 .fire {
-  color: red;
-}
+  color: red; }
 
 .grass {
-  color: rgb(29,187,31);
-}
+  color: #1dbb1f; }
 
 .rock {
-  color: rgb(80,67,46);
-}
+  color: #50432e; }
+
+/*# sourceMappingURL=main.css.map */
