@@ -7,6 +7,7 @@ overflow: hidden;
 .nav {
 position: fixed;
 top: -150px;
+transition: 1s;
 
 }
 
@@ -71,7 +72,7 @@ z-index: -1;
   color: white;
   text-shadow: 2px 2px black;
   margin-left: 10%;
-  margin-top: 1%;
+  margin-top: 0%;
 }
 
 #pokemonSelectBox  {
@@ -109,7 +110,7 @@ z-index: -1;
 #atk {
   z-index: 2;
   margin-left: 2%;
-  margin-top: 0.25%;
+  margin-top: -1%;
   font-size: 125%;
 }
 
@@ -117,7 +118,7 @@ z-index: -1;
   z-index: 2;
     margin-left: 2%;
     font-size: 125%;
-    margin-top: 2.25%;
+    margin-top: 2.5%;
 }
 
 #abilityBox {

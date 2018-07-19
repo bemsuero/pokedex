@@ -100,75 +100,211 @@ function start() {
 
 ///////////////////
 
+// function getPokemon() {
+//   var pokemon = {
+//       pokeName: myObj.name,
+//       pokeImage: myObj.sprites.front_default,
+//       pokeNumber: "Num " + myObj.id,
+//       pokeType: myObj.types[0].type.name,
+//       atk: myObj.stats[4].base_stat,
+//       def: myObj.stats[3].base_stat,
+//       hp: myObj.stats[5].base_stat
+// }
+//     totalPokemon++;
+//     pokemonGet.push(pokemon);
+//
+//     alert("You have " + totalPokemon + " pokemon")
+//     }
+//
+// var owner = {
+//     name: "Trainer",
+//     ownedPokemon: pokemonGet,
+//     // roster
+//     function() {
+//       // return this.pokemon;
+//       console.log(pokemon[0]);
+//       console.log(pokemon[1]);
+//       console.log(pokemon[2]);
+//
+//     }
+// }
+////////////////////////////////////
+Pokemon = {};
+pokemonGet = [];
+totalPokemon = 0;
 
-function squirtle() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var myObj = JSON.parse(this.responseText);
-      document.getElementById("pokeName").innerHTML = myObj.name;
-document.getElementById("pokeImage").src = myObj.sprites.front_default;
-document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
-document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
-document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
-document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-  document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat +  ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
+    function squirtle() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var myObj = JSON.parse(this.responseText);
+          document.getElementById("pokeName").innerHTML = myObj.name;
+          document.getElementById("pokeImage").src = myObj.sprites.front_default;
+          document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
+          document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
+          document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
+          document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
+          document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
+           pokemon = {
+              pokeName: myObj.name,
+              pokeImage: myObj.sprites.front_default,
+              pokeNumber: "Num " + myObj.id,
+              pokeType: myObj.types[0].type.name,
+              atk: myObj.stats[4].base_stat,
+              def: myObj.stats[3].base_stat,
+              hp: myObj.stats[5].base_stat
+        }
+            }
+
+        var owner = {
+            name: "Trainer",
+            ownedPokemon: pokemonGet,
+            // roster
+            function() {
+              // return this.pokemon;
+              console.log(pokemonGet[0]);
+              console.log(pokemonGet[1]);
+              console.log(pokemonGet[2]);
+
+            }
+        }
+      };
+      xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/7/", true);
+      xhttp.send();
+  }
+
+
+    function psyduck() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var myObj = JSON.parse(this.responseText);
+          document.getElementById("pokeName").innerHTML = myObj.name;
+          document.getElementById("pokeImage").src = myObj.sprites.front_default;
+          document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
+          document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
+          document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
+          document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
+          document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
+           pokemon = {
+              pokeName: myObj.name,
+              pokeImage: myObj.sprites.front_default,
+              pokeNumber: "Num " + myObj.id,
+              pokeType: myObj.types[0].type.name,
+              atk: myObj.stats[4].base_stat,
+              def: myObj.stats[3].base_stat,
+              hp: myObj.stats[5].base_stat
+        }
+            }
+
+        var owner = {
+            name: "Trainer",
+            ownedPokemon: pokemonGet,
+            // roster
+            function() {
+              // return this.pokemon;
+              console.log(pokemonGet[0]);
+              console.log(pokemonGet[1]);
+              console.log(pokemonGet[2]);
+
+            }
+        }
+      };
+      xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/54/", true);
+      xhttp.send();
     }
-  };
-  xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/7/", true);
-  xhttp.send();
+
+    function growlithe() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var myObj = JSON.parse(this.responseText);
+          document.getElementById("pokeName").innerHTML = myObj.name;
+          document.getElementById("pokeImage").src = myObj.sprites.front_default;
+          document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
+          document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
+          document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
+          document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
+          document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
+           pokemon = {
+              pokeName: myObj.name,
+              pokeImage: myObj.sprites.front_default,
+              pokeNumber: "Num " + myObj.id,
+              pokeType: myObj.types[0].type.name,
+              atk: myObj.stats[4].base_stat,
+              def: myObj.stats[3].base_stat,
+              hp: myObj.stats[5].base_stat
+        }
+            }
+
+        var owner = {
+            name: "Trainer",
+            ownedPokemon: pokemonGet,
+            // roster
+            function() {
+              // return this.pokemon;
+              console.log(pokemonGet[0]);
+              console.log(pokemonGet[1]);
+              console.log(pokemonGet[2]);
+
+            }
+
+        }
+      };
+      xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/58/", true);
+      xhttp.send();
+    }
+
+
+    function rapidash() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var myObj = JSON.parse(this.responseText);
+          document.getElementById("pokeName").innerHTML = myObj.name;
+          document.getElementById("pokeImage").src = myObj.sprites.front_default;
+          document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
+          document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
+          document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
+          document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
+          document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
+           pokemon = {
+              pokeName: myObj.name,
+              pokeImage: myObj.sprites.front_default,
+              pokeNumber: "Num " + myObj.id,
+              pokeType: myObj.types[0].type.name,
+              atk: myObj.stats[4].base_stat,
+              def: myObj.stats[3].base_stat,
+              hp: myObj.stats[5].base_stat
+        }
+            }
+
+        var owner = {
+            name: "Trainer",
+            ownedPokemon: pokemonGet,
+            // roster
+            function() {
+              // return this.pokemon;
+              console.log(pokemonGet[0]);
+              console.log(pokemonGet[1]);
+              console.log(pokemonGet[2]);
+
+            }
+
+        }
+      };
+      xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/78/", true);
+      xhttp.send();
+    }
+
+    function adopt() {
+      totalPokemon++;
+      pokemonGet.push(pokemon);
+        alert("You have " + totalPokemon + " pokemon")
 }
 
-function psyduck() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var myObj = JSON.parse(this.responseText);
-      document.getElementById("pokeName").innerHTML = myObj.name;
-document.getElementById("pokeImage").src = myObj.sprites.front_default;
-document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
-document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
-document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
-document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-  document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat +  ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-    }
-  };
-  xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/54/", true);
-  xhttp.send();
-}
-
-function growlithe() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var myObj = JSON.parse(this.responseText);
-      document.getElementById("pokeName").innerHTML = myObj.name;
-document.getElementById("pokeImage").src = myObj.sprites.front_default;
-document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
-document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
-document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
-document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-  document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat +  ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-    }
-  };
-  xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/58/", true);
-  xhttp.send();
-}
-
-function rapidash() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var myObj = JSON.parse(this.responseText);
-      document.getElementById("pokeName").innerHTML = myObj.name;
-document.getElementById("pokeImage").src = myObj.sprites.front_default;
-document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
-document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
-document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
-document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-  document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat +  ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-    }
-  };
-  xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/78/", true);
-  xhttp.send();
+function check() {
+  var i = 0;
+  for (i = 0; i < pokemonGet.length; i++)
+  alert("Your pokemon are: " + pokemonGet[i].pokeName);
 }
