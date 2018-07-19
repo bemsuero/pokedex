@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
 
-    <!-- Audio (Works because audio was put here instead of resource folder. If you needed to do that use absolute path) Works on firefox-->
-      <audio controls autoplay hidden loop>
+<head>
+
+  <!-- Audio (Works because audio was put here instead of resource folder. If you needed to do that use absolute path) Works on firefox-->
+  <audio controls autoplay hidden loop>
        <source src="start-music.mp4"
                type='audio/mp4'>
        <!-- The next line will only be executed if the browser doesn't support the <audio> tag-->
@@ -12,24 +12,24 @@
        <p>Your user agent does not support the HTML5 Audio element.</p>
       </audio>
 
-    <!-- MAT -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <!-- MAT -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
-    <!-- my css -->
-    <link rel="stylesheet" type="text/css" href="main.css">
+  <!-- my css -->
+  <link rel="stylesheet" type="text/css" href="main.css">
 
-<!-- animation -->
-    <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <!-- animation -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 
-    <meta charset="utf-8">
-    <title>Pokedex</title>
-  </head>
-  <body>
-    <!-- <section class="revealed"
+  <meta charset="utf-8">
+  <title>Pokedex</title>
+</head>
+
+<body>
+  <!-- <section class="revealed"
       id="firstScreen">
 <div class="col s12"></div>
 <div class="col s12"></div>
@@ -37,15 +37,15 @@
         <div class="col s3">
 
         </div> -->
-<!-- <div class="col s6"> -->
-<!-- <section class="revealed" id="firstScreen"> -->
+  <!-- <div class="col s6"> -->
+  <!-- <section class="revealed" id="firstScreen"> -->
 
-        <img class="revealed" onclick="start()" id="startScreen">
+  <img class="revealed" onclick="start()" id="startScreen">
 
-        <img class="revealed animated infinite flash" id="pressStart">
-      <!-- </section> -->
+  <img class="revealed animated infinite flash" id="pressStart">
+  <!-- </section> -->
 
-      <!-- </div>
+  <!-- </div>
       <div class="col s3">
 
       </div>
@@ -53,67 +53,73 @@
       </section>
 </section> -->
 
-<!-- <div class="container"> -->
-       <section class="hidden" id="infoScreen">
+  <!-- <div class="container"> -->
+  <section class="hidden" id="infoScreen">
     <section class="row">
       <img id="pokedex">
       <div class="col s12">
         <div class="nav">
-        <div class="menu">
-        <p onclick="adopt()">Adopt this Pokemon</p>
+          <div class="menu">
+            <p onclick="adopt()">Adopt this Pokemon</p>
+            <p onclick="owner.function()">Pokemon Raw Stats</p>
+          </div>
+          <img src="images/transparent.png">
         </div>
-        <img src="images/transparent.png">
-      </div>
-      <div class="nav2">
-        <div class="menu2">
-          <p>Red's Pokemon:</p>
-          <div id="pokeList"></div>
-        </div>
-        <img src="images/transparent.png">
+        <div class="nav2">
+          <div class="menu2">
+            <p>Red's Pokemon:</p>
+            <div id="pokeList"></div>
+          </div>
+          <img src="images/transparent.png">
         </div>
       </div>
       <div class="col s1">
       </div>
       <div class="col s3">
         <img id="pokeImage" src="images/pokeball.png">
-         </div>
-         <div class="col s2">
-         </div>
-         <div class="col s6" id="pokeNumber">POKEMON NUMBER</div>
-         <!-- <div class="col s2">
+      </div>
+      <div class="col s2">
+      </div>
+      <div class="col s6" id="pokeNumber">POKEMON NUMBER</div>
+      <!-- <div class="col s2">
          </div> -->
-          <div class="col s6" id="pokeName">POKEMON NAME</div>
-          <div class="col s8">
-          </div>
-          <div class="col s3"id="pokemonSelect">Select Pokemon</div>
-          <div class="col s7">
-          </div>
-          <div class="col s2"></div>
-          <div class="col s2"></div>
-          <div class="col s2"></div>
-          <div class="col  s9"id="pokemonSelectBox"> <ul>
+      <div class="col s6" id="pokeName">POKEMON NAME</div>
+      <div class="col s8">
+      </div>
+      <div class="col s3" id="pokemonSelect">Select Pokemon</div>
+      <div class="col s7">
+      </div>
+      <div class="col s2"></div>
+      <div class="col s2"></div>
+      <div class="col s2"></div>
+      <div class="col  s9" id="pokemonSelectBox">
+        <ul>
           <li onclick="squirtle()">007 Squirtle</li>
           <li onclick="psyduck()">054 Psyduck</li>
           <li onclick="growlithe()">058 Growlithe</li>
-            <li onclick="rapidash()">078 Rapidash</li>
-        </ul> </div>
-          <div class="col s1" id="pokeType">POKEMON TYPE</div>
-                <div class="col s4"></div>
-        <div class="col s3" id="atk">000</div>
-        <div class="col s3" id="def">000</div>
-        </section>
-        <section class="row">
-          <div class="col s12">
-          </div>
-        <div id="abilityBox"> Ablities and HP will display here. Pick a Pokemon to find more information!</div>
-          </section>
-          </div>
-      <!-- </section> -->
+          <li onclick="rapidash()">078 Rapidash</li>
+          <li onclick="tangela()">114 Tangela</li>
+          <li onclick="regirock()">377 Regirock</li>
+        </ul>
+      </div>
+      <div class="col s1 default" id="pokeType">POKEMON TYPE</div>
+      <div class="col s4"></div>
+      <div class="col s3" id="atk">000</div>
+      <div class="col s3" id="def">000</div>
+    </section>
+    <section class="row">
+      <div class="col s12">
+      </div>
+      <div id="abilityBox"> Ablities and HP will display here. Pick a Pokemon to find more information!</div>
+    </section>
+    </div>
+    <!-- </section> -->
 
-      <!-- <button  onclick="createPokemon()">CLICK ME</button> -->
-  </body>
-  <script src="main.js">
-  </script>
+    <!-- <button  onclick="createPokemon()">CLICK ME</button> -->
+</body>
+<script src="main.js">
+</script>
+
 </html>
 
 

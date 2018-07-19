@@ -47,6 +47,38 @@ function start() {
   y.classList.add("revealed");
   y.classList.remove("hidden");
 }
+var color = document.getElementById('pokeType')
+
+function typeChange() {
+  if (color.innerHTML == "water") {
+    color.classList.remove("default");
+    color.classList.remove("rock")
+    color.classList.remove("grass")
+    color.classList.remove("fire")
+    color.classList.add("water");
+  }
+   if (color.innerHTML == "fire") {
+     color.classList.remove("default");
+     color.classList.remove("rock")
+     color.classList.remove("water")
+    color.classList.remove("grass")
+    color.classList.add("fire");
+  }
+   if (color.innerHTML == "grass") {
+    color.classList.remove("default");
+    color.classList.remove("rock")
+    color.classList.remove("water")
+    color.classList.remove("fire")
+    color.classList.add("grass");
+  }
+   if (color.innerHTML == "rock") {
+     color.classList.remove("default");
+     color.classList.remove("grass")
+     color.classList.remove("water")
+    color.classList.remove("fire")
+    color.classList.add("rock");
+  }
+}
 
 //state and status *** status of 200 means it was successful 503 means internal service error 404 means not found.
 
@@ -133,18 +165,16 @@ pokemon = {};
 pokemonGet = [];
 totalPokemon = 0;
 
-var owner = {
-    name: "Trainer",
+owner = {
+    name: "Red",
     ownedPokemon: pokemonGet,
-    // roster
     function() {
-      // return this.pokemon;
-      console.log(pokemonGet[0]);
-      console.log(pokemonGet[1]);
-      console.log(pokemonGet[2]);
-
+      var nope = 0;
+      for (nope = 0; nope < pokemonGet.length; nope++)
+      alert(JSON.stringify(pokemonGet[nope]));
     }
 }
+
 
     function squirtle() {
       var xhttp = new XMLHttpRequest();
@@ -167,10 +197,10 @@ var owner = {
               def: myObj.stats[3].base_stat,
               hp: myObj.stats[5].base_stat
         }
+        typeChange();
             }
-
       };
-      xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/7/", true);
+      xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/squirtle.txt", true);
       xhttp.send();
   }
 // https://raw.githubusercontent.com/bemsuero/pokerepo/master/squirtle.txt
@@ -197,13 +227,15 @@ var owner = {
               def: myObj.stats[3].base_stat,
               hp: myObj.stats[5].base_stat
         }
+        typeChange();
             }
 
       };
-      xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/54/", true);
+      xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/psyduck.txt", true);
       xhttp.send();
     }
 // https://raw.githubusercontent.com/bemsuero/pokerepo/master/psyduck.txt
+// https://pokeapi.co/api/v2/pokemon/54/
 
     function growlithe() {
       var xhttp = new XMLHttpRequest();
@@ -226,14 +258,16 @@ var owner = {
               def: myObj.stats[3].base_stat,
               hp: myObj.stats[5].base_stat
         }
+        typeChange();
             }
 
       };
-      xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/58/", true);
+      xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/growlithe.txt", true);
       xhttp.send();
     }
 
     // https://raw.githubusercontent.com/bemsuero/pokerepo/master/growlithe.txt
+    // https://pokeapi.co/api/v2/pokemon/58/
 
 
     function rapidash() {
@@ -257,12 +291,74 @@ var owner = {
               def: myObj.stats[3].base_stat,
               hp: myObj.stats[5].base_stat
         }
+        typeChange();
             }
       };
-      xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/78/", true);
+      xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/rapidash.txt", true);
       xhttp.send();
     }
-    // https://raw.githubusercontent.com/bemsuero/pokerepo/master/rapidash.txt
+  // https://raw.githubusercontent.com/bemsuero/pokerepo/master/rapidash.txt
+  // https://pokeapi.co/api/v2/pokemon/78/
+
+    function tangela() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var myObj = JSON.parse(this.responseText);
+          document.getElementById("pokeName").innerHTML = myObj.name;
+          document.getElementById("pokeImage").src = myObj.sprites.front_default;
+          document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
+          document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
+          document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
+          document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
+          document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
+           pokemon = {
+              pokeName: myObj.name,
+              pokeImage: myObj.sprites.front_default,
+              pokeNumber: "Num " + myObj.id,
+              pokeType: myObj.types[0].type.name,
+              atk: myObj.stats[4].base_stat,
+              def: myObj.stats[3].base_stat,
+              hp: myObj.stats[5].base_stat
+        }
+        typeChange();
+            }
+      };
+      xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/tangela.txt", true);
+      xhttp.send();
+    }
+    // https://raw.githubusercontent.com/bemsuero/pokerepo/master/tangela.txt
+    // https://pokeapi.co/api/v2/pokemon/114/
+
+    function regirock() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var myObj = JSON.parse(this.responseText);
+          document.getElementById("pokeName").innerHTML = myObj.name;
+          document.getElementById("pokeImage").src = myObj.sprites.front_default;
+          document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
+          document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
+          document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
+          document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
+          document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
+           pokemon = {
+              pokeName: myObj.name,
+              pokeImage: myObj.sprites.front_default,
+              pokeNumber: "Num " + myObj.id,
+              pokeType: myObj.types[0].type.name,
+              atk: myObj.stats[4].base_stat,
+              def: myObj.stats[3].base_stat,
+              hp: myObj.stats[5].base_stat
+        }
+        typeChange();
+            }
+      };
+      xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/regirock.txt", true);
+      xhttp.send();
+    }
+    // https://raw.githubusercontent.com/bemsuero/pokerepo/master/regirock.txt
+    // https://pokeapi.co/api/v2/pokemon/377/
 
     function adopt() {
       totalPokemon++;

@@ -44,7 +44,7 @@ transition: 1s;
   font-size: 75%;
   text-align: center;
   padding: 1%;
-  max-width: 200px;
+  max-width: 175px;
   max-height: 100px;
   color: black;
   background-color: white;
@@ -132,6 +132,7 @@ z-index: -1;
   position: absolute;
   top: 33%;
   left: 60%;
+  font-size: 80%;
 }
 
 #atk {
@@ -207,7 +208,22 @@ height: 15px;
 /* section {
 border: black 3px solid;
 } */
+.default {
+  color: black;
+}
 
-#sectionHelper {
+.water {
+  color: blue;
+}
 
+.fire {
+  color: red;
+}
+
+.grass {
+  color: rgb(29,187,31);
+}
+
+.rock {
+  color: rgb(80,67,46);
 }
