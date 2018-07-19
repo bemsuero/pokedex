@@ -129,9 +129,22 @@ function start() {
 //     }
 // }
 ////////////////////////////////////
-Pokemon = {};
+pokemon = {};
 pokemonGet = [];
 totalPokemon = 0;
+
+var owner = {
+    name: "Trainer",
+    ownedPokemon: pokemonGet,
+    // roster
+    function() {
+      // return this.pokemon;
+      console.log(pokemonGet[0]);
+      console.log(pokemonGet[1]);
+      console.log(pokemonGet[2]);
+
+    }
+}
 
     function squirtle() {
       var xhttp = new XMLHttpRequest();
@@ -156,23 +169,12 @@ totalPokemon = 0;
         }
             }
 
-        var owner = {
-            name: "Trainer",
-            ownedPokemon: pokemonGet,
-            // roster
-            function() {
-              // return this.pokemon;
-              console.log(pokemonGet[0]);
-              console.log(pokemonGet[1]);
-              console.log(pokemonGet[2]);
-
-            }
-        }
       };
       xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/7/", true);
       xhttp.send();
   }
-
+// https://raw.githubusercontent.com/bemsuero/pokerepo/master/squirtle.txt
+// https://pokeapi.co/api/v2/pokemon/7/
 
     function psyduck() {
       var xhttp = new XMLHttpRequest();
@@ -197,22 +199,11 @@ totalPokemon = 0;
         }
             }
 
-        var owner = {
-            name: "Trainer",
-            ownedPokemon: pokemonGet,
-            // roster
-            function() {
-              // return this.pokemon;
-              console.log(pokemonGet[0]);
-              console.log(pokemonGet[1]);
-              console.log(pokemonGet[2]);
-
-            }
-        }
       };
       xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/54/", true);
       xhttp.send();
     }
+// https://raw.githubusercontent.com/bemsuero/pokerepo/master/psyduck.txt
 
     function growlithe() {
       var xhttp = new XMLHttpRequest();
@@ -237,23 +228,12 @@ totalPokemon = 0;
         }
             }
 
-        var owner = {
-            name: "Trainer",
-            ownedPokemon: pokemonGet,
-            // roster
-            function() {
-              // return this.pokemon;
-              console.log(pokemonGet[0]);
-              console.log(pokemonGet[1]);
-              console.log(pokemonGet[2]);
-
-            }
-
-        }
       };
       xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/58/", true);
       xhttp.send();
     }
+
+    // https://raw.githubusercontent.com/bemsuero/pokerepo/master/growlithe.txt
 
 
     function rapidash() {
@@ -278,33 +258,27 @@ totalPokemon = 0;
               hp: myObj.stats[5].base_stat
         }
             }
-
-        var owner = {
-            name: "Trainer",
-            ownedPokemon: pokemonGet,
-            // roster
-            function() {
-              // return this.pokemon;
-              console.log(pokemonGet[0]);
-              console.log(pokemonGet[1]);
-              console.log(pokemonGet[2]);
-
-            }
-
-        }
       };
       xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/78/", true);
       xhttp.send();
     }
+    // https://raw.githubusercontent.com/bemsuero/pokerepo/master/rapidash.txt
 
     function adopt() {
       totalPokemon++;
       pokemonGet.push(pokemon);
         alert("You have " + totalPokemon + " pokemon")
+        check();
 }
 
 function check() {
-  var i = 0;
+  var createList = document.createElement("P");
+  i = 0;
   for (i = 0; i < pokemonGet.length; i++)
-  alert("Your pokemon are: " + pokemonGet[i].pokeName);
+  var makePokemon = document.createTextNode(pokemonGet[i].pokeName);
+  var space = document.createTextNode(" ");
+  createList.appendChild(makePokemon);
+
+  document.getElementById("pokeList").appendChild(makePokemon);
+    document.getElementById("pokeList").appendChild(space);
 }
