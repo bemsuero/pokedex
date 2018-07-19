@@ -1,0 +1,266 @@
+<div class="container">
+<section class="row">
+<div class="col s4">
+<img id="pokeImage" src="images/pokeball.png">
+ </div>
+<div class="col s7" id="pokeName"></div>
+<div class="col s7" id="pokeNumber"></div>
+<div class="col s3" id="pokemonSelect">Select Pokemon</div>
+<div class="col s6" id="pokemonSelectBox"> <ul>
+<li onclick="testClass()">001 Bulbasor</li>
+<li>002 uhhhhhhhh</li>
+<li>003 Venasaur? Probably</li>
+</ul> </div>
+<div class="col s2" id="pokeType"></div>
+<div class="col s2" id="atk"></div>
+<div class="col s2" id="def"></div>
+</section>
+<section class="row">
+<div class="col s12" id="abilitiesBox"></div>
+</section>
+</div>
+<img id="pokedex">
+</section>
+
+////////
+
+var myObj = JSON.parse(this.responseText);
+document.getElementById("pokeName").inneratkML = myObj.name;
+document.getElementById("pokeImage").src = myObj.sprites.front_default;
+document.getElementById("pokeNumber").inneratkML = "Num " + myObj.id;
+document.getElementById("pokeName").inneratkML = myObj.name;
+document.getElementById("pokeType").inneratkML = myObj.types[0].type.name;
+document.getElementById("atk").inneratkML = myObj.stats[4].stat.base_stat;
+document.getElementById("def").inneratkML = myObj.stats[3].stat.base_stat;
+  document.getElementById("abilitiesBox").inneratkML = "HP is: " + myObj.stats[5].stat.base + " " + myObj.abilities[0].ability.name + " " + myObj.abilities[1].ability.name;
+
+
+///////////////////////////////////
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- MAT -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <!-- my css -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+<!-- animation -->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+    <meta charset="utf-8">
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <section class="container"
+      id="firstSceen">
+
+      <section class="row" id="pokedexContainer">
+<div class="col s6">
+        <img onclick="start()" class="revealed" id="startScreen">
+      </div>
+      <div class="col s6">
+        <img class="revealed animated infinite flash col 6" id="pressStart">
+        </div>
+
+      </section>
+</section>
+
+       <!-- <section class="hidden" id="infoScreen">
+        <img id="pokeImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTioW2IhMe_KtYj-61PdgqO9Qdvt1BMiw4yteITIgc-vBFilqqE">
+        <div id="pokemonSelect">Select Pokemon</div>
+        <div id="pokemonSelectBox"> <ul>
+          <li onclick="squirtle()">007 Squirtle</li>
+          <li>002 uhhhhhhhh</li>
+          <li>003 Venasaur? Probably</li>
+          <li>004 Charmander</li>
+          <li>005 Flame Rat 2</li>
+          <li>006 Charazard</li>
+          <li>003 Venasaur? Probably</li>
+          <li>004 Charmander</li>
+          <li>005 Flame Rat 2</li>
+          <li>006 Charazard</li>
+          <li>003 Venasaur? Probably</li>
+          <li>004 Charmander</li>
+          <li>005 Flame Rat 2</li>
+          <li>006 Charazard</li>
+          <li>003 Venasaur? Probably</li>
+          <li>004 Charmander</li>
+          <li>005 Flame Rat 2</li>
+          <li>006 Charazard</li>
+          <li>003 Venasaur? Probably</li>
+          <li>004 Charmander</li>
+          <li>005 Flame Rat 2</li>
+          <li>006 Charazard</li>
+        </ul> </div>
+        <div id="pokeName"></div>
+        <div id="pokeNumber"></div>
+        <div id="pokeType"></div>
+        <div id="atk"></div>
+        <div id="def"></div>
+        <div id="abilityBox"> </div>
+        <img id="pokedex">
+      </section> -->
+
+
+
+  </body>
+  <!-- <script src="main.js"> -->
+  </script>
+</html>
+<!-- <div id="info">
+</div>
+<button  onclick="loadDoc()">CLICK ME</button> -->
+
+
+<!-- You need a Trainer name
+HP, ATK, DEF, ABILITIES
+Pokemon belong to Trainer obj
+Trainer.get(pokemon)
+Display relevant info on at least 3 pokemon
+use any grid system  -->
+
+/////////////////////
+
+html {
+  font-family: 'Press Start 2P', cursive;
+  /* background-image: url("images/startBackground.jpg"); */
+}
+
+#pokedexContainer {
+
+}
+
+
+#startScreen {
+
+}
+
+#pressStart {
+
+}
+
+/* #pokedex {
+  height: 100%;
+  width: 100%;
+  background-image: url("images/pokedex.png");
+  background-position: center;
+  background-repeat: no-repeat;
+position: absolute;
+top: 1px;
+left: 1px;
+}
+
+#infoScreen {
+  color: black;
+  text-shadow: 2px 2px 5px gray;
+}
+#pokeImage {
+  position: relative;
+  top: 120px;
+  left: 150px;
+  z-index: 2;
+}
+
+#pokemonSelect  {
+  position: relative;
+  top: -10px;
+  left: 545px;
+  z-index: 2;
+  font-size: 60%;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+#pokemonSelectBox  {
+  position: relative;
+  top: 0px;
+  left: 510px;
+  z-index: 2;
+  font-size: 60%;
+  overflow: auto;
+  height: 160px;
+  width: 175px;
+  overflow: auto hidden;
+}
+
+#pokeName {
+  position: relative;
+  top: -250px;
+  left: 625px;
+  z-index: 2;
+  color: black;
+  text-shadow: 2px 2px 5px gray;
+}
+
+#pokeNumber {
+  position: relative;
+  top: -315px;
+  left: 625px;
+  z-index: 2;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+#type {
+  position: relative;
+  top: -190px;
+  left: 750px;
+  z-index: 2;
+}
+
+#atk {
+  position: relative;
+  top: -120px;
+  left: 850px;
+  z-index: 2;
+}
+
+#def {
+  position: relative;
+  top: -70px;
+  left: 850px;
+  z-index: 2;
+}
+
+#abilityBox {
+  position: relative;
+  top: 30px;
+  left: 120px;
+  z-index: 2;
+  overflow: auto hidden;
+  width: 80%;
+}
+
+.revealed {
+  opacity: 1 !important;
+  transition-duration: 2s;
+}
+
+.hidden {
+  opacity: 0 !important;
+  transition-duration: 2s
+}
+
+*/
+
+#firstScreen {
+
+
+}
+
+.row {
+  border: red 2px solid;
+
+}
+
+div.col {
+    border: black 2px solid;
+}

@@ -4,6 +4,28 @@ html {
 background-repeat: no-repeat;
 overflow: hidden;
 }
+.nav {
+position: fixed;
+top: -150px;
+
+}
+
+.nav:hover {
+  position: fixed;
+  top: 0px;
+  transition: 1s;
+}
+
+.menu {
+  font-size: 75%;
+  text-align: center;
+  padding: 1%;
+  background-color: white;
+  border-left: rgb(255, 123, 123) 4px solid;
+  border-right: rgb(255, 123, 123) 4px solid;
+  border-top: rgb(0, 0, 0) 4px solid;
+  border-bottom: rgb(0, 0, 0) 4px solid;
+}
 
 #pokedexContainer {
 

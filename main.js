@@ -15,40 +15,6 @@ b.src = pokemonPage.startScreen;
 var startFlash = document.getElementById("pressStart");
 startFlash.src = pokemonPage.pressStart;
 
-// pokemon = [];
-// totalPokemon = 0;
-//
-//   }
-//   createPokemon() {
-//     var pokemon = {
-//       class Pokemon {
-//         constructor() {
-//           this.pokeName = name;
-//           this.pokeImage = image;
-//           this.pokeNumber = number;
-//           this.pokeType = type;
-//           this.atk = atk;
-//           this.def = def;
-//           this.hp = hp;
-//     }
-//     totalPokemon++;
-//     pokemon.push(pokemon);
-//   }
-// }
-//     owner = {
-//       name: "Trainer";
-//       ownedPokemon: pokemon,
-//       roster function() {
-//         // return this.pokemon;
-//         console.log(users[0]);
-//         console.log(users[1]);
-//         console.log(users[2]);
-//
-//       }
-//     }
-//
-//     var x = owner.roster();
-    //you can call it by just x.
 
 // function flash() {
 //   window.setInterval(flash, 1000);
@@ -88,7 +54,52 @@ function start() {
 
 //get - get something from bulletin board. post - put stuff onto a bulletin board. patch - update info. delete - delete it.
 
+// Pokemon = {}; //probably if i'm doing classes
+// pokemonGet = [];
+// totalPokemon = 0;
 //
+// function createPokemon(pokeName) {
+//     pokemon = {
+//       pokeName: pokeName
+//     }
+//     totalPokemon++;
+//     pokemonGet.push(pokemon);
+//
+//     alert("You have " + totalPokemon + " pokemon")
+//     }
+//     var pokemon = {
+//       class Pokemon {
+//         constructor() {
+//           this.pokeName = name;
+//           this.pokeImage = image;
+//           this.pokeNumber = number;
+//           this.pokeType = type;
+//           this.atk = atk;
+//           this.def = def;
+//           this.hp = hp;
+//     }
+//     totalPokemon++;
+//     pokemon.push(pokemon);
+//   }
+// }
+//     owner = {
+//       name: "Trainer";
+//       ownedPokemon: pokemon,
+//       roster function() {
+//         // return this.pokemon;
+//         console.log(users[0]);
+//         console.log(users[1]);
+//         console.log(users[2]);
+//
+//       }
+//     }
+//
+//     var x = owner.roster();
+// you can call it by just x.
+
+
+///////////////////
+
 
 function squirtle() {
   var xhttp = new XMLHttpRequest();
