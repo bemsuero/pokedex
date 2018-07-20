@@ -260,8 +260,9 @@ owner = {
 }
 
 function findPokemon() {
-var number = prompt("What number pokemon would you like to find?");
-loadPokemon(number);
+var answer = prompt("What pokemon would you like to find? (You can enter name or number.)");
+var realAnswer = answer.toLowerCase();
+loadPokemon(realAnswer);
 
 }
 
@@ -277,19 +278,19 @@ pokemon = {
 }
 
 }
-// function retPokemon2 () {
-// pokemon = {
-//   pokeName: myObj.name,
-//   pokeImage: myObj.sprites.front_default,
-//   pokeNumber: "Num " + myObj.id,
-//   pokeType: myObj.types[0].type.name,
-//   pokeType2: myObj.types[1].type.name,
-//   atk: myObj.stats[4].base_stat,
-//   def: myObj.stats[3].base_stat,
-//   hp: myObj.stats[5].base_stat
-// }
-//
-// }
+function retPokemon2 () {
+pokemon = {
+  pokeName: myObj.name,
+  pokeImage: myObj.sprites.front_default,
+  pokeNumber: "Num " + myObj.id,
+  pokeType: myObj.types[0].type.name,
+  pokeType2: myObj.types[1].type.name,
+  atk: myObj.stats[4].base_stat,
+  def: myObj.stats[3].base_stat,
+  hp: myObj.stats[5].base_stat
+}
+
+}
 
 squirtle = "7";
 psyduck = "54";
@@ -311,13 +312,13 @@ function loadPokemon(pokemon) {
       document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
       document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
       document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-// if (myObj.types[1] == "undefined") {
-//   document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
-//   retPokemon2();
-// }
-//   else {
-//     retPokemon();
-//   }
+if (myObj.types[1] == "undefined") {
+  document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
+  retPokemon2();
+}
+  else {
+    retPokemon();
+  }
     retPokemon();
     shake = document.getElementById("pokeImage");
     shake.classList.remove("infinite");
