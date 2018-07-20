@@ -56,7 +56,7 @@ function start() {
   y.classList.remove("hidden");
 var trainerName = prompt("What's your name, Trainer?");
 var addName = document.getElementById("trainerName");
-addName.innerHTML = trainerName;
+addName.innerHTML = trainerName.charAt(0).toUpperCase() + trainerName.slice(1);
 // loopThrough();
 }
 function openBall() {
@@ -89,6 +89,7 @@ function removeClasses() {
   color.classList.remove("steel");
   color.classList.remove("fairy");
 }
+
 function removeClasses2() {
 color2.classList.remove("default");
 color2.classList.remove("normal");
@@ -426,10 +427,21 @@ document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
     shake.classList.remove("infinite");
     typeChange();
     openBall();
+    document.getElementById("moveList").innerHTML = " ";
         }
   };
   xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokemon, true);
   xhttp.send();
+}
+
+
+document.getElementById("pokeImage").addEventListener("click", displayStats);
+
+function displayStats() {
+var moveNum = 0;
+for (moveNum = 0; moveNum < 4; moveNum++) {
+document.getElementById("moveList").innerHTML = "'My Moves are': " + myObj.moves[0].move.name + ", " +  myObj.moves[1].move.name + ", " + myObj.moves[2].move.name + ", and " + myObj.moves[3].move.name + ", " + "'" + myObj.name.charAt(0).toUpperCase() + myObj.name.slice(1) + "!'";
+}
 }
 
 //     function squirtle() {
@@ -632,7 +644,7 @@ function checkList() {
   var createList = document.createElement("P");
   i = 0;
   for (i = 0; i < pokemonGet.length; i++)
-  var makePokemon = document.createTextNode(pokemonGet[i].pokeName);
+  var makePokemon = document.createTextNode(pokemonGet[i].pokeName.charAt(0).toUpperCase() + pokemonGet[i].pokeName.slice(1));
   var space = document.createTextNode(" ");
   createList.appendChild(makePokemon);
   document.getElementById("pokeList").appendChild(makePokemon);

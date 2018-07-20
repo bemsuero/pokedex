@@ -186,6 +186,14 @@ z-index: -1;
   padding-right: 10%;
 }
 
+#moveList {
+  z-index: 2;
+  margin-top: 2%;
+  margin-left: 8%;
+  padding-left: 2%;
+  padding-right: 10%;
+}
+
 .revealed {
   opacity: 1 !important;
   transition-duration: 2s;
