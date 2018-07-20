@@ -30,7 +30,8 @@ h1 {
   border-left: #ff7b7b 4px solid;
   border-right: #ff7b7b 4px solid;
   border-top: black 4px solid;
-  border-bottom: black 4px solid; }
+  border-bottom: black 4px solid;
+  color: #4b66c9; }
 
 .nav2 {
   position: fixed;
@@ -103,7 +104,8 @@ h1 {
   margin-left: 1%;
   position: absolute;
   top: 35%;
-  left: 42%; }
+  left: 42%;
+  color: #4b66c9; }
 
 #pokeName {
   z-index: 2;

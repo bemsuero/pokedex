@@ -6,6 +6,7 @@ $poke-border-b: rgb(0, 0, 0) 4px solid;
 $shadow-g: 2px 2px 5px gray;
 $shadow-b: 2px 2px black;
 $trans: visibility 0s, opacity 0.5s linear;
+$link-color: rgb(75,102,201);
 
 html {
   font-family: 'Press Start 2P', cursive;
@@ -45,6 +46,7 @@ transition: 1s;
   border-right: $poke-border-r;
   border-top: $poke-border-b;
   border-bottom: $poke-border-b;
+  color: $link-color;
 }
 
 .nav2 {
@@ -128,6 +130,7 @@ z-index: -1;
   position: absolute;
   top: 35%;
   left: 42%;
+  color: $link-color;
 }
 
 #pokeName {

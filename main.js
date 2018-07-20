@@ -436,12 +436,16 @@ document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
 
 
 document.getElementById("pokeImage").addEventListener("click", displayStats);
+document.getElementById("pokeImage").addEventListener("click", randomPokemon);
 
 function displayStats() {
-var moveNum = 0;
-for (moveNum = 0; moveNum < 4; moveNum++) {
 document.getElementById("moveList").innerHTML = "'My Moves are': " + myObj.moves[0].move.name + ", " +  myObj.moves[1].move.name + ", " + myObj.moves[2].move.name + ", and " + myObj.moves[3].move.name + ", " + "'" + myObj.name.charAt(0).toUpperCase() + myObj.name.slice(1) + "!'";
 }
+
+function randomPokemon() {
+  if (document.getElementById("atk").innerHTML == 0) {
+    loadPokemon(Math.floor(Math.random() * 800) + 15)
+  }
 }
 
 //     function squirtle() {
