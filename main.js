@@ -3,7 +3,7 @@ pokemonPage = {
   pokedex: "images/" + "pokedex.png",
   startScreen: "images/" + "startScreenUpdate.png",
   pressStart: "images/" + "pressStart.png",
-  pokemonHeading: "Pokemon Version 1.7"
+  pokemonHeading: "Pokemon Version 2.0"
 }
 
 var a = document.getElementById("pokedex");
@@ -202,12 +202,13 @@ def: def,
 hp: hp
 }
 }
-squirtle = "https://pokeapi.co/api/v2/pokemon/7/";
-psyduck = "https://pokeapi.co/api/v2/pokemon/54/";
-growlithe = "https://pokeapi.co/api/v2/pokemon/58/";
-rapidash = "https://pokeapi.co/api/v2/pokemon/78/";
-tangela = "https://pokeapi.co/api/v2/pokemon/114/";
-regirock = "https://pokeapi.co/api/v2/pokemon/377/";
+squirtle = "7";
+// squirtle = "https://pokeapi.co/api/v2/pokemon/7/";
+psyduck = "54";
+growlithe = "58";
+rapidash = "78";
+tangela = "114";
+regirock = "377";
 
 
 function loadPokemon(pokemon) {
@@ -228,7 +229,7 @@ function loadPokemon(pokemon) {
     typeChange();
         }
   };
-  xhttp.open("GET", pokemon, true);
+  xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokemon, true);
   xhttp.send();
 }
 
