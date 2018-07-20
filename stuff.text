@@ -358,3 +358,15 @@ border: black 3px solid;
 .rock {
   color: rgb(80,67,46);
 }
+
+	var "types" = [
+    
+  {"slot": 2, "type": 
+  
+  {"url": "https://pokeapi.co/api/v2/type/2/","name":"fighting"}},
+  
+  {"slot": 1,"type": 
+  
+  {"url":"https://pokeapi.co/api/v2/type/10/" "name": "fire"}}
+  
+  ]

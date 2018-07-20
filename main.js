@@ -63,7 +63,8 @@ function openBall() {
 shake = document.getElementById("pokeImage");
 shake.classList.remove("infinite");
 }
-var color = document.getElementById('pokeType')
+var color = document.getElementById("pokeType");
+var color2 = document.getElementById("pokeType2")
 
 //// lmao this function is FUCKING FOREVER but I don't know the short way to do it.
 function removeClasses() {
@@ -87,6 +88,27 @@ function removeClasses() {
   color.classList.remove("dark");
   color.classList.remove("steel");
   color.classList.remove("fairy");
+}
+function removeClasses2() {
+color2.classList.remove("default");
+color2.classList.remove("normal");
+color2.classList.remove("fire");
+color2.classList.remove("fighting");
+color2.classList.remove("water");
+color2.classList.remove("flying");
+color2.classList.remove("grass");
+color2.classList.remove("poison");
+color2.classList.remove("electric");
+color2.classList.remove("ground");
+color2.classList.remove("psychic");
+color2.classList.remove("rock");
+color2.classList.remove("ice");
+color2.classList.remove("bug");
+color2.classList.remove("dragon");
+color2.classList.remove("ghost");
+color2.classList.remove("dark");
+color2.classList.remove("steel");
+color2.classList.remove("fairy");
 }
 
 function typeChange() {
@@ -163,6 +185,81 @@ function typeChange() {
    removeClasses();
    color.classList.add("fairy");
  }
+}
+
+function typeChange2() {
+if (color2.innerHTML == "water") {
+  removeClasses2();
+  color2.classList.add("water");
+}
+ if (color2.innerHTML == "fire") {
+   removeClasses2();
+  color2.classList.add("fire");
+}
+ if (color2.innerHTML == "grass") {
+  removeClasses2();
+  color2.classList.add("grass");
+}
+ if (color2.innerHTML == "rock") {
+  removeClasses2();
+  color2.classList.add("rock");
+}
+if (color2.innerHTML == "normal") {
+  removeClasses2();
+  color2.classList.add("normal");
+}
+ if (color2.innerHTML == "fighting") {
+   removeClasses2();
+  color2.classList.add("fighting");
+}
+ if (color2.innerHTML == "flying") {
+  removeClasses2();
+  color2.classList.add("flying");
+}
+ if (color2.innerHTML == "poison") {
+  removeClasses2();
+  color2.classList.add("poison");
+}
+if (color2.innerHTML == "electric") {
+  removeClasses2();
+  color2.classList.add("electric");
+}
+ if (color2.innerHTML == "ground") {
+   removeClasses2();
+  color2.classList.add("ground");
+}
+ if (color2.innerHTML == "psychic") {
+  removeClasses2();
+  color2.classList.add("psychic");
+}
+ if (color2.innerHTML == "ice") {
+  removeClasses2();
+  color2.classList.add("ice");
+}
+if (color2.innerHTML == "bug") {
+  removeClasses2();
+  color2.classList.add("bug");
+}
+ if (color2.innerHTML == "dragon") {
+   removeClasses2();
+  color2.classList.add("dragon");
+}
+ if (color2.innerHTML == "ghost") {
+  removeClasses2();
+  color2.classList.add("ghost");
+}
+ if (color2.innerHTML == "dark") {
+  removeClasses2();
+  color2.classList.add("dark");
+}
+if (color2.innerHTML == "steel") {
+ removeClasses2();
+ color2.classList.add("steel");
+}
+if (color2.innerHTML == "fairy") {
+ removeClasses2();
+ color2.classList.add("fairy");
+}
 }
 
 //state and status *** status of 200 means it was successful 503 means internal service error 404 means not found.
@@ -263,7 +360,6 @@ function findPokemon() {
 var answer = prompt("What pokemon would you like to find? (You can enter name or number.)");
 var realAnswer = answer.toLowerCase();
 loadPokemon(realAnswer);
-
 }
 
 function retPokemon () {
@@ -288,6 +384,7 @@ pokemon = {
   atk: myObj.stats[4].base_stat,
   def: myObj.stats[3].base_stat,
   hp: myObj.stats[5].base_stat
+
 }
 
 }
@@ -298,6 +395,7 @@ growlithe = "58";
 rapidash = "78";
 tangela = "114";
 regirock = "377";
+
 
 function loadPokemon(pokemon) {
   var xhttp = new XMLHttpRequest();
@@ -312,14 +410,18 @@ function loadPokemon(pokemon) {
       document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
       document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
       document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-if (myObj.types[1] == "undefined") {
-  document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
+if (myObj.types[0].slot == 2) {
+document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
   retPokemon2();
+      typeChange2();
 }
   else {
+    document.getElementById("pokeType2").innerHTML = "Pokemon Type";
     retPokemon();
+        typeChange();
+        removeClasses2();
   }
-    retPokemon();
+    // retPokemon();
     shake = document.getElementById("pokeImage");
     shake.classList.remove("infinite");
     typeChange();
