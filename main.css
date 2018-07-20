@@ -33,6 +33,10 @@ h1 {
   border-bottom: black 4px solid;
   color: #4b66c9; }
 
+.menu a {
+  text-decoration: none;
+  color: #4b66c9; }
+
 .nav2 {
   position: fixed;
   top: -110px;

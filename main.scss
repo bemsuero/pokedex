@@ -49,6 +49,11 @@ transition: 1s;
   color: $link-color;
 }
 
+.menu a {
+  text-decoration: none;
+  color: $link-color;
+}
+
 .nav2 {
 position: $fix;
 top: -110px;
