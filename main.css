@@ -187,57 +187,57 @@ div.col.s8 {
   color: black; }
 
 .normal {
-  color: rbg(168, 168, 119); }
+  color: #a8a877; }
 
 .fire {
-  color: rbg(240, 128, 48); }
+  color: #f08030; }
 
 .fighting {
-  color: rbg(192, 49, 39); }
+  color: #c03127; }
 
 .water {
-  color: rbg(103, 144, 240); }
+  color: #6790f0; }
 
 .flying {
-  color: rbg(167, 144, 241); }
+  color: #a790f1; }
 
 .grass {
   color: #77c850; }
 
 .poison {
-  color: rbg(160, 64, 160); }
+  color: #a040a0; }
 
 .electric {
-  color: rbg(249, 209, 46); }
+  color: #f9d12e; }
 
 .ground {
-  color: rbg(225, 192, 103); }
+  color: #e1c067; }
 
 .psychic {
-  color: rbg(248, 87, 136); }
+  color: #f85788; }
 
 .rock {
   color: #b8a037; }
 
 .ice {
-  color: rbg(152, 216, 216); }
+  color: #98d8d8; }
 
 .bug {
-  color: rbg(168, 184, 31); }
+  color: #a8b81f; }
 
 .dragon {
-  color: rbg(112, 56, 248); }
+  color: #7038f8; }
 
 .ghost {
-  color: rbg(112, 87, 151); }
+  color: #705797; }
 
 .dark {
-  color: rbg(112, 87, 72); }
+  color: #705748; }
 
 .steel {
-  color: rbg(184, 184, 208); }
+  color: #b8b8d0; }
 
 .fairy {
-  color: rbg(238, 152, 172); }
+  color: #ee98ac; }
 
 /*# sourceMappingURL=main.css.map */
