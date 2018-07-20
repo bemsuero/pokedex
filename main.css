@@ -8,11 +8,13 @@ h1 {
   font-size: 300%;
   text-align: center;
   font-family: 'Permanent Marker', cursive;
-  margin-top: 1%; }
+  margin-top: 1%;
+  margin-left: 33%;
+  position: fixed; }
 
 .nav {
   position: fixed;
-  top: -100px;
+  top: -110px;
   transition: 1s; }
 
 .nav:hover {
@@ -32,7 +34,7 @@ h1 {
 
 .nav2 {
   position: fixed;
-  top: -100px;
+  top: -110px;
   left: 230px;
   transition: 1s; }
 
@@ -84,11 +86,11 @@ h1 {
   height: 300px; }
 
 #pokemonSelect {
-  font-size: 60%;
+  font-size: 70%;
   z-index: 2;
   color: white;
   text-shadow: 2px 2px black;
-  margin-left: 10%;
+  margin-left: 9%;
   margin-top: 1%; }
 
 #pokemonSelectBox {
@@ -106,7 +108,8 @@ h1 {
 #pokeName {
   z-index: 2;
   color: black;
-  text-shadow: 2px 2px 5px gray; }
+  text-shadow: 2px 2px 5px gray;
+  text-transform: capitalize; }
 
 #pokeNumber {
   z-index: 2;
@@ -114,16 +117,19 @@ h1 {
   text-shadow: 2px 2px black; }
 
 #pokeType {
+  text-align: center;
   z-index: 2;
   position: absolute;
-  top: 33%;
-  left: 60%;
-  font-size: 80%; }
+  top: 31%;
+  left: 58%;
+  font-size: 150%;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 5px gray; }
 
 #atk {
   z-index: 2;
   margin-left: 2%;
-  margin-top: 1%;
+  margin-top: 0%;
   font-size: 125%; }
 
 #def {
@@ -180,6 +186,6 @@ div.col.s8 {
   color: #1dbb1f; }
 
 .rock {
-  color: #50432e; }
+  color: #8e744a; }
 
 /*# sourceMappingURL=main.css.map */

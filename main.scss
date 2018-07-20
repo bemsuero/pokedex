@@ -19,11 +19,13 @@ h1  {
   text-align: center;
   font-family: 'Permanent Marker', cursive;
 margin-top: 1%;
+margin-left: 33%;
+position: $fix;
 }
 
 .nav {
 position: $fix;
-top: -100px;
+top: -110px;
 transition: 1s;
 
 }
@@ -47,7 +49,7 @@ transition: 1s;
 
 .nav2 {
 position: $fix;
-top: -100px;
+top: -110px;
 left: 230px;
 transition: 1s;
 }
@@ -107,11 +109,11 @@ z-index: -1;
 }
 
 #pokemonSelect  {
-  font-size: 60%;
+  font-size: 70%;
   z-index: 2;
   color: white;
   text-shadow: $shadow-b;
-  margin-left: 10%;
+  margin-left: 9%;
   margin-top: 1%;
 }
 
@@ -132,6 +134,7 @@ z-index: -1;
   z-index: 2;
   color: black;
   text-shadow: $shadow-g;
+  text-transform: capitalize;
 }
 
 #pokeNumber {
@@ -141,17 +144,20 @@ z-index: -1;
 }
 
 #pokeType {
+  text-align: center;
   z-index: 2;
   position: absolute;
-  top: 33%;
-  left: 60%;
-  font-size: 80%;
+  top: 31%;
+  left: 58%;
+  font-size: 150%;
+  text-transform: capitalize;
+  text-shadow: $shadow-g;
 }
 
 #atk {
   z-index: 2;
   margin-left: 2%;
-  margin-top: 1%;
+  margin-top: 0%;
   font-size: 125%;
 }
 
@@ -221,7 +227,7 @@ height: 15px;
 }
 
 .rock {
-  color: rgb(80,67,46);
+  color: rgb(142,116,74);
 }
 
 // @media screen and (max-width 375px) {

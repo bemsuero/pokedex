@@ -3,7 +3,7 @@ pokemonPage = {
   pokedex: "images/" + "pokedex.png",
   startScreen: "images/" + "startScreenUpdate.png",
   pressStart: "images/" + "pressStart.png",
-  pokemonHeading: "Pokemon Version 2.4"
+  pokemonHeading: "Pokemon Version 1.5"
 }
 
 var a = document.getElementById("pokedex");
@@ -37,7 +37,10 @@ startFlash.src = pokemonPage.pressStart;
 function start() {
   var x = document.getElementById("startScreen");
   x.classList.add("hidden");
-  x.classList.remove("revealed")
+  x.classList.remove("revealed");
+  var c = document.getElementById("heading");
+  c.classList.add("hidden");
+  c.classList.remove("revealed");
   var z = document.getElementById("pressStart");
   z.classList.add("hidden");
   z.classList.remove("revealed");
@@ -51,10 +54,10 @@ function start() {
   var y = document.getElementById("infoScreen")
   y.classList.add("revealed");
   y.classList.remove("hidden");
-var trainerName = prompt("What's your name Trainer?");
+var trainerName = prompt("What's your name, Trainer?");
 var addName = document.getElementById("trainerName");
 addName.innerHTML = trainerName;
-loopThrough();
+// loopThrough();
 }
 var color = document.getElementById('pokeType')
 
@@ -175,7 +178,7 @@ pokemonGet = [];
 totalPokemon = 0;
 
 owner = {
-    name: "Red",
+    name: trainerName,
     ownedPokemon: pokemonGet,
     function() {
       var nope = 0;
@@ -207,7 +210,11 @@ owner = {
               atk: myObj.stats[4].base_stat,
               def: myObj.stats[3].base_stat,
               hp: myObj.stats[5].base_stat
+
+
         }
+        shake = document.getElementById("pokeImage");
+        shake.classList.remove("infinite");
         typeChange();
             }
       };
@@ -300,7 +307,8 @@ owner = {
               pokeType: myObj.types[0].type.name,
               atk: myObj.stats[4].base_stat,
               def: myObj.stats[3].base_stat,
-              hp: myObj.stats[5].base_stat
+              hp: myObj.stats[5].base_stat,
+              // moves: myObj.
         }
         typeChange();
             }
