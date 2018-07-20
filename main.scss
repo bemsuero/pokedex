@@ -25,7 +25,7 @@ position: $fix;
 
 .nav {
 position: $fix;
-top: -110px;
+top: -150px;
 transition: 1s;
 
 }
@@ -148,7 +148,18 @@ z-index: -1;
   z-index: 2;
   position: absolute;
   top: 31%;
-  left: 58%;
+  left: 57%;
+  font-size: 150%;
+  text-transform: capitalize;
+  text-shadow: $shadow-g;
+}
+
+#pokeType2 {
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 31%;
+  left: 77%;
   font-size: 150%;
   text-transform: capitalize;
   text-shadow: $shadow-g;
@@ -214,21 +225,78 @@ height: 15px;
   color: black;
 }
 
-.water {
-  color: blue;
+.normal {
+  color: rbg(168, 168, 119);
 }
 
 .fire {
-  color: red;
+  color: rbg(240, 128, 48);
+}
+
+.fighting {
+  color: rbg(192, 49, 39);
+}
+
+.water {
+  color: rbg(103, 144, 240);
+}
+
+.flying {
+  color: rbg(167, 144, 241);
 }
 
 .grass {
-  color: rgb(29,187,31);
+  color: rgb(119, 200, 80);
+}
+
+.poison {
+  color: rbg(160, 64, 160);
+}
+
+.electric {
+  color: rbg(249, 209, 46);
+}
+
+.ground {
+  color: rbg(225, 192, 103);
+}
+
+.psychic {
+  color: rbg(248, 87, 136);
 }
 
 .rock {
-  color: rgb(142,116,74);
+  color: rgb(184,160,55);
 }
+
+.ice {
+  color: rbg(152, 216, 216);
+}
+
+.bug {
+  color: rbg(168, 184, 31);
+}
+
+.dragon {
+  color: rbg(112, 56, 248);
+}
+
+.ghost {
+  color: rbg(112, 87, 151);
+}
+
+.dark {
+color: rbg(112, 87, 72);
+}
+
+.steel {
+  color: rbg(184, 184, 208);
+}
+
+.fairy {
+  color: rbg(238, 152, 172);
+}
+
 
 // @media screen and (max-width 375px) {
 // html {

@@ -65,6 +65,7 @@ shake.classList.remove("infinite");
 }
 var color = document.getElementById('pokeType')
 
+//// lmao this function is FUCKING FOREVER but I don't know the short way to do it. 
 function typeChange() {
   if (color.innerHTML == "water") {
     color.classList.remove("default");
@@ -177,7 +178,6 @@ function typeChange() {
 //     }
 // }
 ////////////////////////////////////
-pokemon = {};
 pokemonGet = [];
 totalPokemon = 0;
 
@@ -191,42 +191,70 @@ owner = {
     }
 }
 
-function retPokemon (pokeName, pokeImage, pokeNUmber, pokeType, atk, def, hp) {
-var pokemon = {
-pokeName: pokeName,
-pokeImage: pokeImage,
-pokeNumber: pokeNumber,
-pokeType: pokeType,
-atk: atk,
-def: def,
-hp: hp
+function findPokemon() {
+var number = prompt("What number pokemon would you like to find?");
+loadPokemon(number);
+
 }
+
+function retPokemon () {
+pokemon = {
+  pokeName: myObj.name,
+  pokeImage: myObj.sprites.front_default,
+  pokeNumber: "Num " + myObj.id,
+  pokeType: myObj.types[0].type.name,
+  atk: myObj.stats[4].base_stat,
+  def: myObj.stats[3].base_stat,
+  hp: myObj.stats[5].base_stat
 }
+
+}
+function retPokemon2 () {
+pokemon = {
+  pokeName: myObj.name,
+  pokeImage: myObj.sprites.front_default,
+  pokeNumber: "Num " + myObj.id,
+  pokeType: myObj.types[0].type.name,
+  pokeType2: myObj.types[1].type.name,
+  atk: myObj.stats[4].base_stat,
+  def: myObj.stats[3].base_stat,
+  hp: myObj.stats[5].base_stat
+}
+
+}
+
 squirtle = "7";
-// squirtle = "https://pokeapi.co/api/v2/pokemon/7/";
 psyduck = "54";
 growlithe = "58";
 rapidash = "78";
 tangela = "114";
 regirock = "377";
 
-
 function loadPokemon(pokemon) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      var myObj = JSON.parse(this.responseText);
+      myObj = JSON.parse(this.responseText);
       document.getElementById("pokeName").innerHTML = myObj.name;
       document.getElementById("pokeImage").src = myObj.sprites.front_default;
       document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
       document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
+      // document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
       document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
       document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
       document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-      retPokemon();
+if (myObj.types[1] == "undefined") {
+  document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
+  retPokemon2();
+}
+  else {
+    retPokemon();
+  }
+// retPokemon();
     shake = document.getElementById("pokeImage");
     shake.classList.remove("infinite");
     typeChange();
+    openBall();
         }
   };
   xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokemon, true);
@@ -426,9 +454,19 @@ function loadPokemon(pokemon) {
       totalPokemon++;
       pokemonGet.push(pokemon);
         alert("You have " + totalPokemon + " pokemon")
-        check();
+        checkList();
 }
 
+function checkList() {
+  var createList = document.createElement("P");
+  i = 0;
+  for (i = 0; i < pokemonGet.length; i++)
+  var makePokemon = document.createTextNode(pokemonGet[i].pokeName);
+  var space = document.createTextNode(" ");
+  createList.appendChild(makePokemon);
+  document.getElementById("pokeList").appendChild(makePokemon);
+  document.getElementById("pokeList").appendChild(space);
+}
 // function loopThrough() {
 //   var createPokemonSelectBox = document.createElement("P");
 // num = 0;
@@ -442,15 +480,3 @@ function loadPokemon(pokemon) {
 // }
 
 // "https://pokeapi.co/api/v2/pokemon/" + [num]
-
-function check() {
-  var createList = document.createElement("P");
-  i = 0;
-  for (i = 0; i < pokemonGet.length; i++)
-  var makePokemon = document.createTextNode(pokemonGet[i].pokeName);
-  var space = document.createTextNode(" ");
-  createList.appendChild(makePokemon);
-
-  document.getElementById("pokeList").appendChild(makePokemon);
-    document.getElementById("pokeList").appendChild(space);
-}
