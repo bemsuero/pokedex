@@ -427,6 +427,7 @@ document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
     shake.classList.remove("infinite");
     typeChange();
     openBall();
+    addPokemonToList();
     document.getElementById("moveList").innerHTML = " ";
         }
   };
@@ -654,6 +655,26 @@ function checkList() {
   document.getElementById("pokeList").appendChild(makePokemon);
   document.getElementById("pokeList").appendChild(space);
 }
+var squirtle = "squirtle"
+var psyduck = "psyduck"
+var growlithe = "growlithe"
+var rapidash = "rapidash"
+var tangela = "tangela"
+var regirock = "regirock"
+
+function addPokemonToList() {
+  if ((document.getElementById("pokeName").innerHTML == "squirtle") || (document.getElementById("pokeName").innerHTML == "psyduck") || (document.getElementById("pokeName").innerHTML == "growlithe") || (document.getElementById("pokeName").innerHTML == "rapidash") || (document.getElementById("pokeName").innerHTML == "tangela") || (document.getElementById("pokeName").innerHTML == "regirock")) {
+  }
+  else {
+    var createList = document.createElement("li");
+    var pokeAdder = document.createTextNode(myObj.name.charAt(0).toUpperCase() + myObj.name.slice(1) + "  ");
+    var pokeAdderNumber = document.createTextNode(myObj.id + " ");
+    createList.appendChild(pokeAdder);
+   document.getElementById("newPokemon").appendChild(pokeAdderNumber);
+    document.getElementById("newPokemon").appendChild(pokeAdder);
+  }
+}
+
 // function loopThrough() {
 //   var createPokemonSelectBox = document.createElement("P");
 // num = 0;

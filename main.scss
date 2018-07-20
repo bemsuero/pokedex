@@ -125,12 +125,16 @@ z-index: -1;
   overflow: auto $hid;
   font-size: 60%;
   z-index: 2;
-  width: 175px;
+  width: 155px;
   margin-left: 1%;
   position: absolute;
   top: 35%;
   left: 42%;
   color: $link-color;
+}
+
+#underLine {
+  color: black;
 }
 
 #pokeName {
