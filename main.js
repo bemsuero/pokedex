@@ -58,6 +58,12 @@ function start() {
 var trainerName = prompt("What's your name, Trainer?");
 var addName = document.getElementById("trainerName");
   addName.innerHTML = trainerName.charAt(0).toUpperCase() + trainerName.slice(1);
+  if (addName.innerHTML == "Dave") {
+    responsiveVoice.speak("I'm sorry, I can't do that" + addName.innerHTML);
+  }
+  else {
+  responsiveVoice.speak("Welcome" + addName.innerHTML);
+}
 }
 // loopThrough();
 function openBall() {
@@ -423,18 +429,23 @@ function loadPokemon(pokemon) {
       // document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
       document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
       document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-      document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". My ability is " + myObj.abilities[0].ability.name + ". ";
+      document.getElementById("abilityBox").innerHTML = "This pokemon's HP is " + myObj.stats[5].base_stat + " and it's abilitiy is " + myObj.abilities[0].ability.name + ". ";
       // + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
+
 if (myObj.types[0].slot == 2) {
 document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
+responsiveVoice.cancel();
   retPokemon2();
       typeChange2();
+        responsiveVoice.speak(document.getElementById("abilityBox").innerHTML);
 }
   else {
     document.getElementById("pokeType2").innerHTML = "Pokemon Type";
+    responsiveVoice.cancel();
     retPokemon();
         typeChange();
         removeClasses2();
+          responsiveVoice.speak(document.getElementById("abilityBox").innerHTML);
   }
     // retPokemon();
     shake = document.getElementById("pokeImage");
@@ -710,3 +721,6 @@ function addPokemonToList() {
 // // }
 // // }
 // }
+
+
+//details tag, check it out. 
