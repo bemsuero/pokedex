@@ -4,13 +4,16 @@
 <head>
 
   <!-- Audio (Works because audio was put here instead of resource folder. If you needed to do that use absolute path) Works on firefox-->
-  <audio controls autoplay hidden loop>
+  <!-- <audio controls autoplay hidden loop>
        <source src="start-music.mp4"
-               type='audio/mp4'>
+               type='audio/mp4'> -->
        <!-- The next line will only be executed if the browser doesn't support the <audio> tag-->
 
-       <p>Your user agent does not support the HTML5 Audio element.</p>
-      </audio>
+       <!-- <p>Your user agent does not support the HTML5 Audio element.</p>
+      </audio> -->
+      
+      <!-- voice -->
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
   <!-- MAT -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
@@ -29,6 +32,7 @@
 </head>
 
 <body>
+
   <!-- <section class="revealed"
       id="firstScreen">
 <div class="col s12"></div>
@@ -93,18 +97,22 @@
       <div class="col s2"></div>
       <div class="col s2"></div>
       <div class="col s2"></div>
+
       <div class="col s9" id="pokemonSelectBox">
         <ul>
-          <li onclick="loadPokemon(squirtle)">007 Squirtle</li>
-          <li onclick="loadPokemon(psyduck)">054 Psyduck</li>
-          <li onclick="loadPokemon(growlithe)">058 Growlithe</li>
-          <li onclick="loadPokemon(rapidash)">078 Rapidash</li>
+          <li onclick="loadPokemon(squirtle)">7 Squirtle</li>
+          <li onclick="loadPokemon(psyduck)">54 Psyduck</li>
+          <li onclick="loadPokemon(growlithe)">58 Growlithe</li>
+          <li onclick="loadPokemon(rapidash)">78 Rapidash</li>
           <li onclick="loadPokemon(tangela)">114 Tangela</li>
           <li onclick="loadPokemon(regirock)">377 Regirock</li>
           <li id="underLine"><u> New Pokemon</u></li>
+          <div id="hideSelectBox">
+
           <li id ="newPokemon"></li>
         </ul>
-      </div>
+    </div>
+    </div>
       <div class="col s1 default pokeType" id="pokeType">Pokemon Type</div>
         <div class="col s1 default pokeType" id="pokeType2">Pokemon Type</div>
       <div class="col s4"></div>
@@ -124,6 +132,9 @@
 </body>
 <script src="main.js">
 </script>
+
+
+
 
 </html>
 

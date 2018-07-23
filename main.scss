@@ -119,18 +119,38 @@ z-index: -1;
   margin-top: 1%;
 }
 
+
+
 #pokemonSelectBox  {
-  overflow: auto;
   height: 160px;
-  overflow: auto $hid;
+  // overflow: $hid;
   font-size: 60%;
   z-index: 2;
-  width: 155px;
+  width: 154px;
   margin-left: 1%;
+  padding-right: 1%;
+  padding-left: 0.5%;
   position: absolute;
   top: 35%;
   left: 42%;
   color: $link-color;
+}
+
+  #hideSelectBox {
+    overflow-y: scroll;
+    height: 70px;
+    // visibility: $hid;
+    max-height: 100%;
+    margin-right: 1%;
+  }
+
+
+#newPokemon {
+  height: inherit;
+  margin-right: 4%;
+  // visibility: visible;
+  color: black;
+
 }
 
 #underLine {

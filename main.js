@@ -1,9 +1,10 @@
 console.log("Everything is in control")
+// responsiveVoice.speak("hello world");
 pokemonPage = {
   pokedex: "images/" + "pokedex.png",
   startScreen: "images/" + "startScreenUpdate.png",
   pressStart: "images/" + "pressStart.png",
-  pokemonHeading: "Pokemon Version 2.0"
+  pokemonHeading: "Pokemon Version 2.5"
 }
 
 var a = document.getElementById("pokedex");
@@ -56,9 +57,9 @@ function start() {
   y.classList.remove("hidden");
 var trainerName = prompt("What's your name, Trainer?");
 var addName = document.getElementById("trainerName");
-addName.innerHTML = trainerName.charAt(0).toUpperCase() + trainerName.slice(1);
-// loopThrough();
+  addName.innerHTML = trainerName.charAt(0).toUpperCase() + trainerName.slice(1);
 }
+// loopThrough();
 function openBall() {
 shake = document.getElementById("pokeImage");
 shake.classList.remove("infinite");
@@ -359,16 +360,28 @@ owner = {
 
 function findPokemon() {
 var answer = prompt("What pokemon would you like to find? (You can enter name or number.)");
+if (answer == 1) {
+  let answer = "bulbasaur";
+  loadPokemon(answer);
+}
+if (answer == 802) {
+  let answer = "marshadow";
+  loadPokemon(answer);
+}
+ if (answer > 803) {
+   alert("That number is too high!")
+ } else {
 var realAnswer = answer.toLowerCase();
 loadPokemon(realAnswer);
+}
 }
 
 function retPokemon () {
 pokemon = {
-  pokeName: myObj.name,
+  pokeName: responsiveVoice.speak(myObj.name),
   pokeImage: myObj.sprites.front_default,
   pokeNumber: "Num " + myObj.id,
-  pokeType: myObj.types[0].type.name,
+  pokeType: responsiveVoice.speak(myObj.types[0].type.name + "type"),
   atk: myObj.stats[4].base_stat,
   def: myObj.stats[3].base_stat,
   hp: myObj.stats[5].base_stat
@@ -377,11 +390,11 @@ pokemon = {
 }
 function retPokemon2 () {
 pokemon = {
-  pokeName: myObj.name,
+  pokeName: responsiveVoice.speak(myObj.name),
   pokeImage: myObj.sprites.front_default,
   pokeNumber: "Num " + myObj.id,
-  pokeType: myObj.types[0].type.name,
-  pokeType2: myObj.types[1].type.name,
+  pokeType: responsiveVoice.speak(myObj.types[0].type.name + "type"),
+  pokeType2: responsiveVoice.speak("Also" + myObj.types[1].type.name + "type."),
   atk: myObj.stats[4].base_stat,
   def: myObj.stats[3].base_stat,
   hp: myObj.stats[5].base_stat
@@ -410,7 +423,8 @@ function loadPokemon(pokemon) {
       // document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
       document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
       document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-      document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
+      document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". My ability is " + myObj.abilities[0].ability.name + ". ";
+      // + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
 if (myObj.types[0].slot == 2) {
 document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
   retPokemon2();
@@ -437,15 +451,16 @@ document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
 
 
 document.getElementById("pokeImage").addEventListener("click", displayStats);
-document.getElementById("pokeImage").addEventListener("click", randomPokemon);
+// document.getElementById("pokeImage").addEventListener("click", randomPokemon);
 
 function displayStats() {
-document.getElementById("moveList").innerHTML = "'My Moves are': " + myObj.moves[0].move.name + ", " +  myObj.moves[1].move.name + ", " + myObj.moves[2].move.name + ", and " + myObj.moves[3].move.name + ", " + "'" + myObj.name.charAt(0).toUpperCase() + myObj.name.slice(1) + "!'";
+randomPokemon();
+document.getElementById("moveList").innerHTML = "'My Moves are': " + myObj.moves[0].move.name + ", " +  myObj.moves[1].move.name + ", " + myObj.moves[2].move.name + ", and " + myObj.moves[3].move.name + ". " + "'" + myObj.name.charAt(0).toUpperCase() + myObj.name.slice(1) + "!'";
 }
 
 function randomPokemon() {
   if (document.getElementById("atk").innerHTML == 0) {
-    loadPokemon(Math.floor(Math.random() * 800) + 15)
+    loadPokemon(Math.floor(Math.random() * 800) + 2)
   }
 }
 
@@ -655,19 +670,14 @@ function checkList() {
   document.getElementById("pokeList").appendChild(makePokemon);
   document.getElementById("pokeList").appendChild(space);
 }
-var squirtle = "squirtle"
-var psyduck = "psyduck"
-var growlithe = "growlithe"
-var rapidash = "rapidash"
-var tangela = "tangela"
-var regirock = "regirock"
+
 
 function addPokemonToList() {
   if ((document.getElementById("pokeName").innerHTML == "squirtle") || (document.getElementById("pokeName").innerHTML == "psyduck") || (document.getElementById("pokeName").innerHTML == "growlithe") || (document.getElementById("pokeName").innerHTML == "rapidash") || (document.getElementById("pokeName").innerHTML == "tangela") || (document.getElementById("pokeName").innerHTML == "regirock")) {
   }
   else {
     var createList = document.createElement("li");
-    var pokeAdder = document.createTextNode(myObj.name.charAt(0).toUpperCase() + myObj.name.slice(1) + "  ");
+    var pokeAdder = document.createTextNode(myObj.name.charAt(0).toUpperCase() + myObj.name.slice(1) + "    " + "    " + "    ");
     var pokeAdderNumber = document.createTextNode(myObj.id + " ");
     createList.appendChild(pokeAdder);
    document.getElementById("newPokemon").appendChild(pokeAdderNumber);
@@ -688,3 +698,15 @@ function addPokemonToList() {
 // }
 
 // "https://pokeapi.co/api/v2/pokemon/" + [num]
+
+// {
+// // "students" = {
+// // "karl": {
+// //   "course": "sei june 2018",
+// // "age": 30,
+// // "enrolled": true,
+// // "skills": [javascript, HTML, CSS],
+// // "enroll date": "june-23-2018"
+// // }
+// // }
+// }
