@@ -384,10 +384,10 @@ loadPokemon(realAnswer);
 
 function retPokemon () {
 pokemon = {
-  pokeName: responsiveVoice.speak(myObj.name),
+  pokeName: myObj.name,
   pokeImage: myObj.sprites.front_default,
   pokeNumber: "Num " + myObj.id,
-  pokeType: responsiveVoice.speak(myObj.types[0].type.name + "type"),
+  pokeType: myObj.types[0].type.name,
   atk: myObj.stats[4].base_stat,
   def: myObj.stats[3].base_stat,
   hp: myObj.stats[5].base_stat
@@ -396,11 +396,11 @@ pokemon = {
 }
 function retPokemon2 () {
 pokemon = {
-  pokeName: responsiveVoice.speak(myObj.name),
+  pokeName: myObj.name,
   pokeImage: myObj.sprites.front_default,
   pokeNumber: "Num " + myObj.id,
-  pokeType: responsiveVoice.speak(myObj.types[0].type.name + "type"),
-  pokeType2: responsiveVoice.speak("Also" + myObj.types[1].type.name + "type."),
+  pokeType: myObj.types[0].type.name,
+  pokeType2: myObj.types[1].type.name,
   atk: myObj.stats[4].base_stat,
   def: myObj.stats[3].base_stat,
   hp: myObj.stats[5].base_stat
@@ -437,6 +437,9 @@ document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
 responsiveVoice.cancel();
   retPokemon2();
       typeChange2();
+      responsiveVoice.speak(myObj.name);
+      responsiveVoice.speak(myObj.types[0].type.name + "type");
+      responsiveVoice.speak("Also" + myObj.types[1].type.name + "type.");
         responsiveVoice.speak(document.getElementById("abilityBox").innerHTML);
 }
   else {
@@ -445,6 +448,8 @@ responsiveVoice.cancel();
     retPokemon();
         typeChange();
         removeClasses2();
+        responsiveVoice.speak(myObj.name);
+        pokeType: responsiveVoice.speak(myObj.types[0].type.name + "type");
           responsiveVoice.speak(document.getElementById("abilityBox").innerHTML);
   }
     // retPokemon();
@@ -723,4 +728,4 @@ function addPokemonToList() {
 // }
 
 
-//details tag, check it out. 
+//details tag, check it out.
