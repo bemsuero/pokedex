@@ -4,14 +4,21 @@ html {
   background-repeat: no-repeat;
   overflow: hidden; }
 
+
 h1 {
   font-size: 300%;
   text-align: center;
   font-family: 'Permanent Marker', cursive;
   margin-top: 1%;
-  margin-left: 33%;
-  position: fixed; }
-
+  /* margin-left: 33%; */
+  /* position: fixed;  */
+  }
+#loadScreen{
+  width: 500px;
+  height: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
 .nav {
   position: fixed;
   top: -150px;
@@ -58,15 +65,17 @@ h1 {
   border-bottom: black 4px solid;
   overflow: auto; }
 
+
 #startScreen {
-  position: fixed;
+  /* position: fixed; */
   top: 10%;
   left: 35%; }
 
 #pressStart {
-  position: fixed;
-  top: 35%;
-  left: 44%; }
+  position: relative;
+  top: -349px;
+  left: 3%;
+}
 
 #pokedex {
   height: 100%;
@@ -74,7 +83,8 @@ h1 {
   background-image: url("images/pokedex.png");
   background-position: center;
   background-repeat: no-repeat;
-  position: fixed;
+  position: absolute;
+  top:0;
   z-index: -1; }
 
 #infoScreen {
@@ -82,17 +92,17 @@ h1 {
   text-shadow: 2px 2px 5px gray; }
 
 #pokeImage {
-  z-index: 2;
-  width: 300px;
-  height: 300px; }
+  top: 0;
+  margin-top: 10%;
+  width: 27%;
+  position: fixed}
 
 #pokemonSelect {
-  font-size: 70%;
-  z-index: 2;
+  font-size: 63%;
   color: white;
   text-shadow: 2px 2px black;
-  margin-left: 9%;
-  margin-top: 1%; }
+  right: 287px;
+  top: 59px; }
 
 #pokemonSelectBox {
   height: 160px;
@@ -124,11 +134,19 @@ h1 {
 #pokeName {
   z-index: 2;
   color: black;
-  text-shadow: 2px 2px 5px gray;
-  text-transform: capitalize; }
+  text-shadow: 2px 2px 5px grey;
+  text-transform: capitalize;
+  top: 0;
+  left: 50%;
+  padding-top: 165px;
+  position: absolute; }
 
 #pokeNumber {
-  z-index: 2;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 50%;
+  padding-top: 105px;
   color: white;
   text-shadow: 2px 2px black; }
 
@@ -153,29 +171,33 @@ h1 {
   text-shadow: 2px 2px 5px gray; }
 
 #atk {
-  z-index: 2;
-  margin-left: 2%;
-  margin-top: 0%;
-  font-size: 125%; }
+  z-index: 0;
+  top: 357px;
+  position: absolute;
+  left: 72%;
+  font-size: 125%;}
 
 #def {
-  z-index: 2;
-  margin-left: 2%;
+  z-index: 0;
+  position: absolute;
+  left: 72%;
+  top: 428px;
   font-size: 125%;
-  margin-top: 2.5%; }
+ }
 
 #abilityBox {
-  z-index: 2;
-  margin-left: 8%;
-  padding-left: 2%;
-  padding-right: 10%; }
+z-index: 0;
+position: absolute;
+top: 600px;
+left: 9%;
+ }
 
 #moveList {
-  z-index: 2;
-  margin-top: 2%;
-  margin-left: 8%;
-  padding-left: 2%;
-  padding-right: 10%; }
+  z-index: 0;
+  position: absolute;
+  top: 645px;
+  left: 9%;
+}
 
 .revealed {
   opacity: 1 !important;
@@ -186,7 +208,9 @@ h1 {
 .hidden {
   opacity: 0 !important;
   visibility: hidden;
-  transition: visibility 0s, opacity 0.5s linear; }
+  transition: visibility 0s, opacity 0.5s linear;
+  display: none;
+}
 
 #trainerName {
   margin-top: 0%; }
@@ -262,5 +286,13 @@ div.col.s8 {
 
 .fairy {
   color: #ee98ac; }
+
+@media screen and (max-width: 414px)  {
+  #loadScreen {
+    width: 500px;
+    height: 700px;
+    margin: 0 auto;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

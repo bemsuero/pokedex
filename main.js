@@ -36,6 +36,7 @@ startFlash.src = pokemonPage.pressStart;
 
 
 function start() {
+  document.getElementById('loadScreen').classList.add('hidden');
   var x = document.getElementById("startScreen");
   x.classList.add("hidden");
   x.classList.remove("revealed");

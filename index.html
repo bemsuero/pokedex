@@ -11,7 +11,7 @@
 
        <!-- <p>Your user agent does not support the HTML5 Audio element.</p>
       </audio> -->
-      
+
       <!-- voice -->
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
@@ -26,8 +26,9 @@
 
   <!-- animation -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
+
   <title>Pokedex</title>
 </head>
 
@@ -43,10 +44,12 @@
         </div> -->
   <!-- <div class="col s6"> -->
   <!-- <section class="revealed" id="firstScreen"> -->
-<h1 class="revealed" id="heading"></h1>
+  <div id="loadScreen">
+  <h1 class="revealed" id="heading"></h1>
   <img class="revealed" onclick="start()" id="startScreen">
 
   <img class="revealed animated infinite flash" id="pressStart">
+  </div>
   <!-- </section> -->
 
   <!-- </div>
