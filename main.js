@@ -1,20 +1,48 @@
 console.log("Everything is in control")
 // responsiveVoice.speak("hello world");
 pokemonPage = {
-  pokedex: "images/" + "pokedex.png",
+  pokedex: "images/" + "pokedexBlank.png",
   startScreen: "images/" + "startScreenUpdate.png",
   pressStart: "images/" + "pressStart.png",
-  pokemonHeading: "Pokemon Version 2.5"
+  pokemonHeading: "Pokemon Version 2.5",
+  atkDefBox: "images/" + "atkDefBox.png",
+  descriptionBox: "images/" + "descriptionBox.png",
+  menuIcon: "images/" + "menuIcon.png",
+  numberNameBar: "images/" + "numberNameBar.png",
+  pokemonIcon: "images/" + "pokemonIcon.png",
+  pokeTypeBoxes: "images/" + "pokeTypeBoxes.png",
+  selectBoxImage: "images/" + "selectBoxImage.png"
 }
 
-var a = document.getElementById("pokedex");
-a.src = pokemonPage.pokedex;
+var pokedexImage = document.getElementById("pokedex");
+pokedexImage.src = pokemonPage.pokedex;
 
-var b = document.getElementById("startScreen");
-b.src = pokemonPage.startScreen;
+var atkDefBox = document.getElementById("atkDefBox");
+atkDefBox.src = pokemonPage.atkDefBox;
 
-var c = document.getElementById("heading");
-c.innerHTML = pokemonPage.pokemonHeading;
+var descriptionBox = document.getElementById("descriptionBox");
+descriptionBox.src = pokemonPage.descriptionBox;
+
+var menuIcon = document.getElementById("nav");
+menuIcon.src = pokemonPage.menuIcon;
+
+var numberNameBar = document.getElementById("numberNameBar");
+numberNameBar.src = pokemonPage.numberNameBar;
+
+var pokemonIcon = document.getElementById("nav2");
+pokemonIcon.src = pokemonPage.pokemonIcon;
+
+var pokeTypeBoxes = document.getElementById("pokeTypeBox");
+pokeTypeBoxes.src = pokemonPage.pokeTypeBoxes;
+
+var selectBoxImage = document.getElementById("pokemonSelectBoxImage");
+selectBoxImage.src = pokemonPage.selectBoxImage;
+
+var startScreenImage = document.getElementById("startScreen");
+startScreenImage.src = pokemonPage.startScreen;
+
+var startHeading = document.getElementById("heading");
+startHeading.innerHTML = pokemonPage.pokemonHeading;
 
 var startFlash = document.getElementById("pressStart");
 startFlash.src = pokemonPage.pressStart;
@@ -76,47 +104,11 @@ var color2 = document.getElementById("pokeType2")
 //// lmao this function is FUCKING FOREVER but I don't know the short way to do it.
 function removeClasses() {
   // var x = color.classList.remove;
-  color.classList.remove("default");
-  color.classList.remove("normal");
-  color.classList.remove("fire");
-  color.classList.remove("fighting");
-  color.classList.remove("water");
-  color.classList.remove("flying");
-  color.classList.remove("grass");
-  color.classList.remove("poison");
-  color.classList.remove("electric");
-  color.classList.remove("ground");
-  color.classList.remove("psychic");
-  color.classList.remove("rock");
-  color.classList.remove("ice");
-  color.classList.remove("bug");
-  color.classList.remove("dragon");
-  color.classList.remove("ghost");
-  color.classList.remove("dark");
-  color.classList.remove("steel");
-  color.classList.remove("fairy");
+color.className = "";
 }
 
 function removeClasses2() {
-color2.classList.remove("default");
-color2.classList.remove("normal");
-color2.classList.remove("fire");
-color2.classList.remove("fighting");
-color2.classList.remove("water");
-color2.classList.remove("flying");
-color2.classList.remove("grass");
-color2.classList.remove("poison");
-color2.classList.remove("electric");
-color2.classList.remove("ground");
-color2.classList.remove("psychic");
-color2.classList.remove("rock");
-color2.classList.remove("ice");
-color2.classList.remove("bug");
-color2.classList.remove("dragon");
-color2.classList.remove("ghost");
-color2.classList.remove("dark");
-color2.classList.remove("steel");
-color2.classList.remove("fairy");
+color.className = "";
 }
 
 function typeChange() {
@@ -358,9 +350,9 @@ owner = {
     name: trainerName,
     ownedPokemon: pokemonGet,
     function() {
-      var nope = 0;
-      for (nope = 0; nope < pokemonGet.length; nope++)
-      alert(JSON.stringify(pokemonGet[nope]));
+      var arrayContents = 0;
+      for (arrayContents = 0; arrayContents < pokemonGet.length; arrayContents++)
+      alert(JSON.stringify(pokemonGet[arrayContents]));
     }
 }
 
@@ -453,8 +445,6 @@ responsiveVoice.cancel();
           responsiveVoice.speak(document.getElementById("abilityBox").innerHTML);
   }
     // retPokemon();
-    shake = document.getElementById("pokeImage");
-    shake.classList.remove("infinite");
     typeChange();
     openBall();
     addPokemonToList();
