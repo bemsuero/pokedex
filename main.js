@@ -1,5 +1,5 @@
 console.log("Everything is in control")
-// responsiveVoice.speak("hello world");
+
 pokemonPage = {
   pokedex: "images/" + "pokedex.png",
   startScreen: "images/" + "startScreenUpdate.png",
@@ -20,23 +20,8 @@ var startFlash = document.getElementById("pressStart");
 startFlash.src = pokemonPage.pressStart;
 
 
-// function flash() {
-//   window.setInterval(flash, 1000);
-//   var startFlash = document.getElementById("pressStart");
-//   startFlash.src = pokemonPage.pressStart;
-//   if (startFlash.classList = "extraRevealed") {
-//     startFlash.classList.add("extraHidden");
-//     startFlash.classList.remove("extraRevealed")
-//   } else {
-//     startFlash.classList.add("extraRevealed")
-//     startFlash.classList.remove("extraHidden");
-//   } LOLOLOLOLOLLOLLOLOLOLOLOLOLOLOLOLOLOL
-// }
-
-
 
 function start() {
-  document.getElementById('loadScreen').classList.add('hidden');
   var x = document.getElementById("startScreen");
   x.classList.add("hidden");
   x.classList.remove("revealed");
@@ -49,9 +34,7 @@ function start() {
   z.classList.remove("animated");
   z.classList.remove("infinite");
   z.classList.remove("flash");
-  // var w = document.getElementById("firstScreen");
-  // w.classList.add("hidden");
-  // w.classList.remove("revealed")
+
 
   var y = document.getElementById("infoScreen")
   y.classList.add("revealed");
@@ -66,7 +49,7 @@ var addName = document.getElementById("trainerName");
   responsiveVoice.speak("Welcome" + addName.innerHTML);
 }
 }
-// loopThrough();
+
 function openBall() {
 shake = document.getElementById("pokeImage");
 shake.classList.remove("infinite");
@@ -74,54 +57,15 @@ shake.classList.remove("infinite");
 var color = document.getElementById("pokeType");
 var color2 = document.getElementById("pokeType2")
 
-//// lmao this function is FUCKING FOREVER but I don't know the short way to do it.
 function removeClasses() {
-  // var x = color.classList.remove;
-  color.classList.remove("default");
-  color.classList.remove("normal");
-  color.classList.remove("fire");
-  color.classList.remove("fighting");
-  color.classList.remove("water");
-  color.classList.remove("flying");
-  color.classList.remove("grass");
-  color.classList.remove("poison");
-  color.classList.remove("electric");
-  color.classList.remove("ground");
-  color.classList.remove("psychic");
-  color.classList.remove("rock");
-  color.classList.remove("ice");
-  color.classList.remove("bug");
-  color.classList.remove("dragon");
-  color.classList.remove("ghost");
-  color.classList.remove("dark");
-  color.classList.remove("steel");
-  color.classList.remove("fairy");
+color.className = "";
 }
 
 function removeClasses2() {
-color2.classList.remove("default");
-color2.classList.remove("normal");
-color2.classList.remove("fire");
-color2.classList.remove("fighting");
-color2.classList.remove("water");
-color2.classList.remove("flying");
-color2.classList.remove("grass");
-color2.classList.remove("poison");
-color2.classList.remove("electric");
-color2.classList.remove("ground");
-color2.classList.remove("psychic");
-color2.classList.remove("rock");
-color2.classList.remove("ice");
-color2.classList.remove("bug");
-color2.classList.remove("dragon");
-color2.classList.remove("ghost");
-color2.classList.remove("dark");
-color2.classList.remove("steel");
-color2.classList.remove("fairy");
+color.className = "";
 }
 
 function typeChange() {
-  // var plus = color.classList.add;
   if (color.innerHTML == "water") {
     removeClasses();
     color.classList.add("water");
@@ -271,87 +215,6 @@ if (color2.innerHTML == "fairy") {
 }
 }
 
-//state and status *** status of 200 means it was successful 503 means internal service error 404 means not found.
-
-//http verbs specify what kind of request you're making (get post patch and delete are main verbs.)
-
-//get - get something from bulletin board. post - put stuff onto a bulletin board. patch - update info. delete - delete it.
-
-// Pokemon = {}; //probably if i'm doing classes
-// pokemonGet = [];
-// totalPokemon = 0;
-//
-// function createPokemon(pokeName) {
-//     pokemon = {
-//       pokeName: pokeName
-//     }
-//     totalPokemon++;
-//     pokemonGet.push(pokemon);
-//
-//     alert("You have " + totalPokemon + " pokemon")
-//     }
-//     var pokemon = {
-//       class Pokemon {
-//         constructor() {
-//           this.pokeName = name;
-//           this.pokeImage = image;
-//           this.pokeNumber = number;
-//           this.pokeType = type;
-//           this.atk = atk;
-//           this.def = def;
-//           this.hp = hp;
-//     }
-//     totalPokemon++;
-//     pokemon.push(pokemon);
-//   }
-// }
-//     owner = {
-//       name: "Trainer";
-//       ownedPokemon: pokemon,
-//       roster function() {
-//         // return this.pokemon;
-//         console.log(users[0]);
-//         console.log(users[1]);
-//         console.log(users[2]);
-//
-//       }
-//     }
-//
-//     var x = owner.roster();
-// you can call it by just x.
-
-
-///////////////////
-
-// function getPokemon() {
-//   var pokemon = {
-//       pokeName: myObj.name,
-//       pokeImage: myObj.sprites.front_default,
-//       pokeNumber: "Num " + myObj.id,
-//       pokeType: myObj.types[0].type.name,
-//       atk: myObj.stats[4].base_stat,
-//       def: myObj.stats[3].base_stat,
-//       hp: myObj.stats[5].base_stat
-// }
-//     totalPokemon++;
-//     pokemonGet.push(pokemon);
-//
-//     alert("You have " + totalPokemon + " pokemon")
-//     }
-//
-// var owner = {
-//     name: "Trainer",
-//     ownedPokemon: pokemonGet,
-//     // roster
-//     function() {
-//       // return this.pokemon;
-//       console.log(pokemon[0]);
-//       console.log(pokemon[1]);
-//       console.log(pokemon[2]);
-//
-//     }
-// }
-////////////////////////////////////
 pokemonGet = [];
 totalPokemon = 0;
 
@@ -359,9 +222,9 @@ owner = {
     name: trainerName,
     ownedPokemon: pokemonGet,
     function() {
-      var nope = 0;
-      for (nope = 0; nope < pokemonGet.length; nope++)
-      alert(JSON.stringify(pokemonGet[nope]));
+      var arrayContents = 0;
+      for (arrayContents = 0; arrayContents < pokemonGet.length; arrayContents++)
+      alert(JSON.stringify(pokemonGet[arrayContents]));
     }
 }
 
@@ -427,11 +290,9 @@ function loadPokemon(pokemon) {
       document.getElementById("pokeImage").src = myObj.sprites.front_default;
       document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
       document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
-      // document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
       document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
       document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
       document.getElementById("abilityBox").innerHTML = "This pokemon's HP is " + myObj.stats[5].base_stat + " and it's abilitiy is " + myObj.abilities[0].ability.name + ". ";
-      // + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
 
 if (myObj.types[0].slot == 2) {
 document.getElementById("pokeType2").innerHTML = myObj.types[1].type.name;
@@ -453,9 +314,6 @@ responsiveVoice.cancel();
         pokeType: responsiveVoice.speak(myObj.types[0].type.name + "type");
           responsiveVoice.speak(document.getElementById("abilityBox").innerHTML);
   }
-    // retPokemon();
-    shake = document.getElementById("pokeImage");
-    shake.classList.remove("infinite");
     typeChange();
     openBall();
     addPokemonToList();
@@ -468,7 +326,6 @@ responsiveVoice.cancel();
 
 
 document.getElementById("pokeImage").addEventListener("click", displayStats);
-// document.getElementById("pokeImage").addEventListener("click", randomPokemon);
 
 function displayStats() {
 randomPokemon();
@@ -481,194 +338,6 @@ function randomPokemon() {
   }
 }
 
-//     function squirtle() {
-//       var xhttp = new XMLHttpRequest();
-//       xhttp.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
-//           var myObj = JSON.parse(this.responseText);
-//           document.getElementById("pokeName").innerHTML = myObj.name;
-//           document.getElementById("pokeImage").src = myObj.sprites.front_default;
-//           document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
-//           document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
-//           document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
-//           document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-//           document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-//            pokemon = {
-//               pokeName: myObj.name,
-//               pokeImage: myObj.sprites.front_default,
-//               pokeNumber: "Num " + myObj.id,
-//               pokeType: myObj.types[0].type.name,
-//               atk: myObj.stats[4].base_stat,
-//               def: myObj.stats[3].base_stat,
-//               hp: myObj.stats[5].base_stat
-//
-//
-//         }
-//         shake = document.getElementById("pokeImage");
-//         shake.classList.remove("infinite");
-//         typeChange();
-//             }
-//       };
-//       xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/squirtle.txt", true);
-//       xhttp.send();
-//   }
-// // https://raw.githubusercontent.com/bemsuero/pokerepo/master/squirtle.txt
-// // https://pokeapi.co/api/v2/pokemon/7/
-//
-//     function psyduck() {
-//       var xhttp = new XMLHttpRequest();
-//       xhttp.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
-//           var myObj = JSON.parse(this.responseText);
-//           document.getElementById("pokeName").innerHTML = myObj.name;
-//           document.getElementById("pokeImage").src = myObj.sprites.front_default;
-//           document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
-//           document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
-//           document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
-//           document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-//           document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-//            pokemon = {
-//               pokeName: myObj.name,
-//               pokeImage: myObj.sprites.front_default,
-//               pokeNumber: "Num " + myObj.id,
-//               pokeType: myObj.types[0].type.name,
-//               atk: myObj.stats[4].base_stat,
-//               def: myObj.stats[3].base_stat,
-//               hp: myObj.stats[5].base_stat
-//         }
-//         typeChange();
-//             }
-//
-//       };
-//       xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/psyduck.txt", true);
-//       xhttp.send();
-//     }
-// // https://raw.githubusercontent.com/bemsuero/pokerepo/master/psyduck.txt
-// // https://pokeapi.co/api/v2/pokemon/54/
-//
-//     function growlithe() {
-//       var xhttp = new XMLHttpRequest();
-//       xhttp.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
-//           var myObj = JSON.parse(this.responseText);
-//           document.getElementById("pokeName").innerHTML = myObj.name;
-//           document.getElementById("pokeImage").src = myObj.sprites.front_default;
-//           document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
-//           document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
-//           document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
-//           document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-//           document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-//            pokemon = {
-//               pokeName: myObj.name,
-//               pokeImage: myObj.sprites.front_default,
-//               pokeNumber: "Num " + myObj.id,
-//               pokeType: myObj.types[0].type.name,
-//               atk: myObj.stats[4].base_stat,
-//               def: myObj.stats[3].base_stat,
-//               hp: myObj.stats[5].base_stat
-//         }
-//         typeChange();
-//             }
-//
-//       };
-//       xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/growlithe.txt", true);
-//       xhttp.send();
-//     }
-//
-//     // https://raw.githubusercontent.com/bemsuero/pokerepo/master/growlithe.txt
-//     // https://pokeapi.co/api/v2/pokemon/58/
-//
-//
-//     function rapidash() {
-//       var xhttp = new XMLHttpRequest();
-//       xhttp.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
-//           var myObj = JSON.parse(this.responseText);
-//           document.getElementById("pokeName").innerHTML = myObj.name;
-//           document.getElementById("pokeImage").src = myObj.sprites.front_default;
-//           document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
-//           document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
-//           document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
-//           document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-//           document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-//            pokemon = {
-//               pokeName: myObj.name,
-//               pokeImage: myObj.sprites.front_default,
-//               pokeNumber: "Num " + myObj.id,
-//               pokeType: myObj.types[0].type.name,
-//               atk: myObj.stats[4].base_stat,
-//               def: myObj.stats[3].base_stat,
-//               hp: myObj.stats[5].base_stat,
-//               // moves: myObj.
-//         }
-//         typeChange();
-//             }
-//       };
-//       xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/rapidash.txt", true);
-//       xhttp.send();
-//     }
-//   // https://raw.githubusercontent.com/bemsuero/pokerepo/master/rapidash.txt
-//   // https://pokeapi.co/api/v2/pokemon/78/
-//
-//     function tangela() {
-//       var xhttp = new XMLHttpRequest();
-//       xhttp.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
-//           var myObj = JSON.parse(this.responseText);
-//           document.getElementById("pokeName").innerHTML = myObj.name;
-//           document.getElementById("pokeImage").src = myObj.sprites.front_default;
-//           document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
-//           document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
-//           document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
-//           document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-//           document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-//            pokemon = {
-//               pokeName: myObj.name,
-//               pokeImage: myObj.sprites.front_default,
-//               pokeNumber: "Num " + myObj.id,
-//               pokeType: myObj.types[0].type.name,
-//               atk: myObj.stats[4].base_stat,
-//               def: myObj.stats[3].base_stat,
-//               hp: myObj.stats[5].base_stat
-//         }
-//         typeChange();
-//             }
-//       };
-//       xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/tangela.txt", true);
-//       xhttp.send();
-//     }
-//     // https://raw.githubusercontent.com/bemsuero/pokerepo/master/tangela.txt
-//     // https://pokeapi.co/api/v2/pokemon/114/
-//
-//     function regirock() {
-//       var xhttp = new XMLHttpRequest();
-//       xhttp.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
-//           var myObj = JSON.parse(this.responseText);
-//           document.getElementById("pokeName").innerHTML = myObj.name;
-//           document.getElementById("pokeImage").src = myObj.sprites.front_default;
-//           document.getElementById("pokeNumber").innerHTML = "Num " + myObj.id;
-//           document.getElementById("pokeType").innerHTML = myObj.types[0].type.name;
-//           document.getElementById("atk").innerHTML = myObj.stats[4].base_stat;
-//           document.getElementById("def").innerHTML = myObj.stats[3].base_stat;
-//           document.getElementById("abilityBox").innerHTML = "HP is: " + myObj.stats[5].base_stat + ". " + "Abilities are " + myObj.abilities[0].ability.name + " and " + myObj.abilities[1].ability.name + ". ";
-//            pokemon = {
-//               pokeName: myObj.name,
-//               pokeImage: myObj.sprites.front_default,
-//               pokeNumber: "Num " + myObj.id,
-//               pokeType: myObj.types[0].type.name,
-//               atk: myObj.stats[4].base_stat,
-//               def: myObj.stats[3].base_stat,
-//               hp: myObj.stats[5].base_stat
-//         }
-//         typeChange();
-//             }
-//       };
-//       xhttp.open("GET", "https://raw.githubusercontent.com/bemsuero/pokerepo/master/regirock.txt", true);
-//       xhttp.send();
-//     }
-    // https://raw.githubusercontent.com/bemsuero/pokerepo/master/regirock.txt
-    // https://pokeapi.co/api/v2/pokemon/377/
 
     function adopt() {
       totalPokemon++;
@@ -701,32 +370,3 @@ function addPokemonToList() {
     document.getElementById("newPokemon").appendChild(pokeAdder);
   }
 }
-
-// function loopThrough() {
-//   var createPokemonSelectBox = document.createElement("P");
-// num = 0;
-// for (num = 0; num <= 807; num++)
-// var populateBox = document.createTextNode();
-// var space1 = document.createTextNode(" ");
-// createPokemonSelectBox.appendChild(populateBox);
-//
-// document.getElementById("pokemonSelectBox").appendChild("populateBox");
-// document.getElementById("pokemonSelectBox").appendChild("space1");
-// }
-
-// "https://pokeapi.co/api/v2/pokemon/" + [num]
-
-// {
-// // "students" = {
-// // "karl": {
-// //   "course": "sei june 2018",
-// // "age": 30,
-// // "enrolled": true,
-// // "skills": [javascript, HTML, CSS],
-// // "enroll date": "june-23-2018"
-// // }
-// // }
-// }
-
-
-//details tag, check it out.

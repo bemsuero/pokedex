@@ -175,7 +175,7 @@ z-index: -1;
   z-index: 2;
   position: absolute;
   top: 31%;
-  left: 57%;
+  left: 59%;
   font-size: 150%;
   text-transform: capitalize;
   text-shadow: $shadow-g;
@@ -195,7 +195,7 @@ z-index: -1;
 #atk {
   z-index: 2;
   margin-left: 2%;
-  margin-top: 0%;
+  margin-top: -1%;
   font-size: 125%;
 }
 
@@ -203,14 +203,14 @@ z-index: -1;
   z-index: 2;
     margin-left: 2%;
     font-size: 125%;
-    margin-top: 2.5%;
+    margin-top: 4.0%;
 }
 
 #abilityBox {
   z-index: 2;
   margin-left: 8%;
   padding-left: 2%;
-  padding-right: 10%;
+  padding-right: 12%;
 }
 
 #moveList {

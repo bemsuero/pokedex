@@ -2,16 +2,6 @@
 <html>
 
 <head>
-
-  <!-- Audio (Works because audio was put here instead of resource folder. If you needed to do that use absolute path) Works on firefox-->
-  <!-- <audio controls autoplay hidden loop>
-       <source src="start-music.mp4"
-               type='audio/mp4'> -->
-       <!-- The next line will only be executed if the browser doesn't support the <audio> tag-->
-
-       <!-- <p>Your user agent does not support the HTML5 Audio element.</p>
-      </audio> -->
-
       <!-- voice -->
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 
@@ -34,33 +24,14 @@
 
 <body>
 
-  <!-- <section class="revealed"
-      id="firstScreen">
-<div class="col s12"></div>
-<div class="col s12"></div>
-      <section class="row" id="pokedexContainer">
-        <div class="col s3">
 
-        </div> -->
-  <!-- <div class="col s6"> -->
-  <!-- <section class="revealed" id="firstScreen"> -->
   <div id="loadScreen">
   <h1 class="revealed" id="heading"></h1>
   <img class="revealed" onclick="start()" id="startScreen">
 
   <img class="revealed animated infinite flash" id="pressStart">
   </div>
-  <!-- </section> -->
 
-  <!-- </div>
-      <div class="col s3">
-
-      </div>
-
-      </section>
-</section> -->
-
-  <!-- <div class="container"> -->
   <section class="hidden" id="infoScreen">
     <section class="row">
       <img id="pokedex">
@@ -89,8 +60,7 @@
       <div class="col s2">
       </div>
       <div class="col s6" id="pokeNumber">Pokemon Number</div>
-      <!-- <div class="col s2">
-         </div> -->
+
       <div class="col s6" id="pokeName">Pokemon Name</div>
       <div class="col s8">
       </div>
@@ -129,9 +99,7 @@
       <div id="moveList"></div>
     </section>
     </div>
-    <!-- </section> -->
 
-    <!-- <button  onclick="createPokemon()">CLICK ME</button> -->
 </body>
 <script src="main.js">
 </script>
@@ -142,11 +110,3 @@
 </html>
 
 <!-- https://bemsuero.github.io/pokedex/ -->
-
-
-<!-- You need a Trainer name
-HP, ATK, DEF, ABILITIES
-Pokemon belong to Trainer obj
-Trainer.get(pokemon)
-Display relevant info on at least 3 pokemon
-use any grid system  -->
