@@ -320,7 +320,7 @@ responsiveVoice.cancel();
     document.getElementById("moveList").innerHTML = " ";
         }
   };
-  xhttp.open("GET", "https://fizal.me/pokeapi/pokemon/" + pokemon, true);
+  xhttp.open("GET", "https://pokeapi.co/api/v2/pokemon/" + pokemon, true);
   xhttp.send();
 }
 
